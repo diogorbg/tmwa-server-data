@@ -1,6 +1,6 @@
 //
 
-001-2.gat,34,23,0|script|Troupe Leader|165,
+001-2.gat,34,23,0|script|Lider da Trupe|165,
 {
     callfunc "ClearVariables";
 
@@ -9,34 +9,34 @@
     if (@inspector == 4) goto L_NohMask_Troupe;
     if (@inspector == 13) goto L_NohMask_Found;
 
-    mes "[Troupe Leader]";
-    mes "\"Hello. I'm the leader of a traveling theater troupe. We'll be staying here in Tulimshar for a while.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Olá. Eu sou o líder de uma companhia de teatro. Nós vamos ficar aqui em Tulimshar por um tempo.\"";
     goto L_Close;
 
 L_NohMask_Troupe:
-    mes "[Troupe Leader]";
-    mes "\"Yes, a mask was stolen from us the last night we were in Hurnscald.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Sim, uma máscara nos foi roubado na última noite, estávamos em Hurnscald.\"";
     next;
     menu
-        "Any ideas on who might have taken it?", L_NohMask_Idea,
-        "Are you sure one of your troupe members didn't hide it and commit those robberies?", L_NohMask_Accuse,
+        "Alguma idéia de quem poderia ter tomado?", L_NohMask_Idea,
+        "Tem a certeza de um de seus integrantes da trupe não escondê-lo e cometer esses roubos?", L_NohMask_Accuse,
         "Hmm...", L_Close;
 
 L_NohMask_Idea:
     set @inspector, 5;
     callsub S_Update_Mask;
-    mes "[Troupe Leader]";
-    mes "\"Hm...I did see an old man hang out near the theater after our last show.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Hm...Eu vi um homem velho sair perto do teatro depois de nosso último show.\"";
     goto L_Close;
 
 L_NohMask_Accuse:
-    mes "[Troupe Leader]";
-    mes "\"I am absolutely positive. None of my troupe have left the city since we got here. Good day!\"";
+    mes "[Líder da Trupe]";
+    mes "\"Estou absolutamente positivo. Não é da minha companhia, deixaram a cidade desde que chegamos aqui. bom dia!\"";
     goto L_Close;
 
 L_NohMask_Found:
-    mes "[Troupe Leader]";
-    mes "\"Thank you for finding the mask. You did such a good job, you should keep it.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Obrigado por encontrar a máscara. Você fez um bom trabalho, você deve mantê-lo.\"";
     getinventorylist;
     if (@inventorylist_count == 100) goto L_NohMask_TooMany;
     mes "[1500 experience points]";
@@ -45,14 +45,14 @@ L_NohMask_Found:
     callsub S_Update_Mask;
     getitem "NohMask", 1;
     next;
-    mes "[Troupe Leader]";
-    mes "\"We don't need it anymore. We're doing different shows here.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Nós não precisamos de mais. Estamos fazendo vários shows aqui.\"";
     goto L_Close;
 
 L_NohMask_TooMany:
     next;
-    mes "[Troupe Leader]";
-    mes "\"Except, you don't seem to have any room for it. I'll hold onto it for you until you do have room.\"";
+    mes "[Líder da Trupe]";
+    mes "\"Exceto que, você não se parece ter qualquer espaço para isso. Vou guardá-la para você até que você tenha espaço.\"";
     goto L_Close;
 
 L_Close:
