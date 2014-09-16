@@ -8,123 +8,123 @@
 
     if (BaseLevel >= 25) goto L_teach_soon;
 
-    mes "[Luca the Hunter]";
-    mes "\"Ouch! It hurts, this wound I got from battle.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Ouch! Dói, esta ferida que eu tenho de batalhas.\"";
     next;
-    menu "Tell me about it",L_Exp,"Nevermind",L_Nev;
+    menu "Diga-me sobre isso",L_Exp,"Não importa",L_Nev;
 
 L_Exp:
-    mes "[Luca the Hunter]";
-    mes "\"I was just coming back from a long journey. I ran into a group of scorpions and started fighting them for experience.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Eu estava voltando de uma longa viagem. Corri para um grupo de escorpiões e começou a combatê-los para a experiência.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Then, out of a cave came a BLACK one! I had NEVER seen it before!\"";
+    mes "[Luca o Caçador]";
+    mes "\"Então, de uma caverna veio um preto! Eu nunca tinha visto isso antes!\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Luckily I had a camera with me! Here's a picture of it... Let me find it, I put it in my pocket somewhere...\"";
+    mes "[Luca o Caçador]";
+    mes "\"Felizmente eu tinha uma câmera comigo! Aqui está uma foto dele... Deixe-me encontrá-lo, eu coloquei no bolso em algum lugar...\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Oh man! My pockets have been ripped clean off!\"";
+    mes "[Luca o Caçador]";
+    mes "\"Nossa! Meus bolsos foram rasgados\"";
     goto L_Close;
 
 L_Nev:
-    mes "[Luca the Hunter]";
+    mes "[Luca o Caçador]";
     mes "\"Hmpf!\"";
     goto L_Close;
 
 L_teach_soon:
-    mes "[Luca the Hunter]";
-    mes "\"You've grown quite a bit stronger since I first saw you, strolling around town like that! You know, if you train a little more, maybe we can help each other out a little?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Você cresceu um pouco mais forte desde que eu vi pela primeira vez, dar uma volta em torno da cidade assim! você sabe, se você treinar um pouco mais, talvez possamos ajudar uns aos outros um pouco?\"";
     goto L_Close;
 
 L_teach:
     if (getskilllv(SKILL_POOL)) goto L_teachmore;
 
-    mes "[Luca the Hunter]";
-    mes "\"Hey there! You've become quite the adventurer, haven't you? I think it's time that someone taught you some basic skills.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Olá! Você se tornou bastante aventureiro, não é mesmo? Eu acho que é hora de que alguém lhe ensinar algumas habilidades básicas.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"If you want, I can help with that!\"";
+    mes "[Luca o Caçador]";
+    mes "\"Se você quiser, eu posso ajudar com isso!\"";
     next;
     menu
-        "Sure, that sounds fun!", L_Next,
-        "I'm not interested.", L_Nev;
+        "Claro, isso parece divertido!", L_Next,
+        "Eu não estou interessado.", L_Nev;
 
 L_Next:
-    mes "[Luca the Hunter]";
-    mes "\"All right! It's not all that easy, though. First you have to learn how to focus. That's because you can learn many skills, but you can't focus on all of them all the time.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Tudo certo! Não é tão fácil, apesar de. Primeiro você tem que aprender a se concentrar. Isso porque você pode aprender muitas habilidades, mas você não pode se concentrar em todos eles o tempo todo.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"When you can do that, you can learn some real skills, and when you know them, you can come back to me to tell me which ones you want to focus on. Deal?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Quando você pode fazer isso, você pode aprender algumas verdadeiras habilidades, e quando você conhecê-los, você pode voltar para me dizer qual deles você deseja focar. negócio fechado?\"";
     next;
     menu
-        "Yeah!", L_teach0_follow,
-        "Certainly!", L_teach0_follow,
-        "Wait... what do you mean?", L_Explain,
-        "Please explain some more.", L_Explain,
-        "No.", L_Nev;
+        "Sim!", L_teach0_follow,
+        "Com certeza!", L_teach0_follow,
+        "Espere ... o que você quer dizer?", L_Explain,
+        "Por favor, explique um pouco mais.", L_Explain,
+        "Não.", L_Nev;
 
 L_teach0_follow:
     if (getskilllv(SKILL_POOL)) goto L_teachmore;
 
-    mes "[Luca the Hunter]";
-    mes "\"Great! Now, before I can give you that skill, I have to make sure that those stories about you are all true and that you really are experienced enough.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Ótimo! Agora, antes que eu possa dar-lhe essa habilidade, Tenho a certeza de que essas histórias sobre você é tudo verdade e que você realmente é experiente o suficiente.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"So I'm going to ask you some easy questions.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Então eu vou lhe fazer algumas perguntas fáceis.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"First, who is the man who guards the entrance to the old Tulimshar underground arena?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Primeiro, quem é o homem que guarda a entrada para o antigo cenário subterrâneo Tulimshar?\"";
     next;
     input @answer$;
     if (@answer$ != "Phaet" && @answer$ != "phaet") goto L_wronganswer;
-    mes "[Luca the Hunter]";
-    mes "\"Good. Next, what's the name of the pipe-smoker who lives on top of Lore Mountain and makes leathery goods there?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Boa. Em seguida, o que é o nome do pipe-fumante que vive em cima de Lore Montanha e torna os produtos de couro lá?\"";
     next;
     input @answer$;
     if (@answer$ != "Pachua" && @answer$ != "pachua") goto L_wronganswer;
-    mes "[Luca the Hunter]";
-    mes "\"Great! One more: Who was the adventurer who built Dimond's Cove for Dimond?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Ótimo! Mais um: Quem foi aventureiro que construiu Cove de Dimond para Dimond?\"";
     next;
     input @answer$;
     if (@answer$ != "Merlin" && @answer$ != "merlin") goto L_wronganswer;
-    mes "[Luca the Hunter]";
-    mes "Luca laughs in excitement.";
-    mes "\"All right! You're the real thing, my friend!\"";
+    mes "[Luca o Caçador]";
+    mes "Luca ri na emoção.";
+    mes "\"Tudo certo! Você é a coisa real, meu amigo!\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Now stand over there. This should only take a second...\"";
-    mes "He takes off a pendant he is wearing and holds it up.";
+    mes "[Luca o Caçador]";
+    mes "\"Agora fique por lá. Isto deve levar apenas um segundo...\"";
+    mes "Ele tira um pingente que ele está usando e mantém-se.";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"See that fang at the end of the chain? Keep staring at it.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Veja que a presa no final da cadeia? Mantenha olhando para ele.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "He starts swinging the pendant back and forth.";
-    mes "\"And whatever you do, don't blink. Don't look away, and don't blink.\"";
+    mes "[Luca o Caçador]";
+    mes "Ele começa a balançar o pingente para trás e para frente.";
+    mes "\"E faça o que fizer, não pisque. Não desvie o olhar, e não pisque.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "The world slows down around you as you focus on the pendant going back...";
+    mes "[Luca o Caçador]";
+    mes "O mundo vai ficando mais lento em torno de você...";
     next;
-    mes "and forth...";
+    mes "e para a frente...";
     next;
-    mes "and back...";
+    mes "e para trás...";
     next;
-    mes "and forth...";
+    mes "e para a frente...";
     next;
-    mes "and back...";
+    mes "e para trás...";
     next;
-    mes "and...";
+    mes "e...";
     next;
-    mes "You feel relaxed.";
+    mes "Você se sente relaxado.";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"... still there?\"";
-    mes "You hear the sound of fingers snapping. Why would someone do that on such a calm day?";
+    mes "[Luca o Caçador]";
+    mes "\"... ainda há?\"";
+    mes "Você ouve o som de dedos estalando. Por que alguém iria fazer isso num dia tão calmo?";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Oh, good... I think it worked. Nice job!\"";
-    mes "He grins.";
+    mes "[Luca o Caçador]";
+    mes "\"Ah, bom ... Eu acho que funcionou. bom trabalho!\"";
+    mes "ele sorri.";
     mes "[You gain 10,000 experience points]";
     mes "[You learned Skill Focus]";
     setskill SKILL_POOL, 1;
@@ -133,86 +133,86 @@ L_teach0_follow:
     goto L_teachmore2;
 
 L_wronganswer:
-    mes "[Luca the Hunter]";
-    mes "\"No, that was wrong. I suppose you're not as experienced as I thought you'd be.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Não, isso estar errado. Acho que você não está tão experiente como eu pensei que você estaria.\"";
     goto L_Close;
 
 L_Explain:
-    mes "[Luca the Hunter]";
-    mes "\"Alright, what do you want to know?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Tudo bem, o que você quer saber?\"";
     next;
     goto L_Explain_loop;
 
 L_Explain_loop:
     menu
-        "What's skill focus?", L_explain_focus,
-        "What skills are there?", L_explain_skills,
-        "How do skills work?", L_explain_work,
-        "Thanks, I think I got it!", L_Next;
+        "Qual é o foco de habilidade?", L_explain_focus,
+        "Quais habilidades existem?", L_explain_skills,
+        "Como fazer o trabalho de habilidades?", L_explain_work,
+        "Obrigado, eu acho que eu entendi!", L_Next;
 
 L_explain_focus:
-    mes "[Luca the Hunter]";
-    mes "\"Well, you can learn many, many skills. But you can't really use all of them at once, not even old Auldsbels' head is big enough for that! So you have to focus.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Bem, você pode aprender muitas habilidades. Mas você não pode realmente usar todos eles de uma só vez, nem mesmo velho Auldsbels' cabeça é grande o suficiente para isso! Então você tem que se concentrar.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"But you can change that focus whenever you want. It works like this: You come to me, you tell me what you want to focus on, and we do exercises until it's stuck in your head.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Mas você pode mudar esse foco sempre que quiser. Funciona assim: Você vem para mim, você me diz o que você quer se concentrar, e fazemos os exercícios até que esteja preso na sua cabeça.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"If there's not enough space in your head, you'll first have to stop thinking about some other thing. There's an exercise I learned to do that, so when you talk to me you can just let me know what you want to forget.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Se não houver espaço suficiente em sua cabeça, primeiro você tem que parar de pensar em outra coisas. Há um exercício que aprendi a fazer isso, Então, quando você falar comigo você pode simplesmente me deixar saber o que você quer esquecer.\"";
     next;
-    mes "[Luca the Hunter]";
+    mes "[Luca o Caçador]";
     if (getskilllv(SKILL_POOL) == 0)
-        mes "\"Right now you can't focus on anything yet, so I'll first have to teach you a simple skill to keep your focus.\"";
+        mes "\"Neste momento, você não pode se concentrar em nada ainda, então eu vou primeiro ter que te ensinar uma habilidade simples para manter seu foco.\"";
     if (getskilllv(SKILL_POOL) == 1)
-        mes "\"Right now you can only focus on one thing at a time. So if you want to change what your focus is, you have to forget whatever else you've focused on.\"";
+        mes "\"Agora você só pode se concentrar em uma coisa de cada vez. Então você quer mudar o seu foco é, você tem que esquecer tudo aquilo que você já estar focado.\"";
     if (getskilllv(SKILL_POOL) > 1)
-        mes "\"You can focus on " + getskilllv(SKILL_POOL) + " skills right now.\"";
+        mes "\"Você pode se concentrar em" + getskilllv(SKILL_POOL) + " habilidades agora mesmo.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"You can come back to me to focus or unfocus a skill whenever you want, I'm here all day.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Você pode voltar para se concentrar ou desfocar uma habilidade sempre que quiser, Estou aqui todos os dias.\"";
     next;
-    mes "\"For unfocusing you need to bring a potion; a special potion. That potion is not the easiest to get, but I am sure you are able to.\"";
+    mes "\"Para desfocagem você precisa trazer uma poção; uma poção especial. Essa poção não é o mais fácil de obter, mas eu tenho certeza que você é capaz.\"";
     next;
     goto L_Explain_loop;
 
 L_explain_skills:
-    mes "[Luca the Hunter]";
-    mes "\"Well, I don't really know... lots, I think. I can teach you brawling, which is good when you've run out of arrows or don't have a weapon around.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Bem, eu realmente não sei... Eu posso te ensinar brigando, o que é bom quando você correr para fora das flechas ou não tiver uma arma em torno de você .\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"But there's other skills around. Some mages need special skills to concentrate, so ask around in that crowd, if that's your thing.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Mas existe outras habilidades em torno de. Alguns magos precisa de habilidades especiais para se concentrar, por isso pedimos em torno naquela multidão, se isso é coisa sua.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"I've also heard that there is someone in Hurnscald who can help you make your body more resistant against some things. But body and mind belong together, so you probably have to focus for that, too.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Eu também ouvi que existe alguém em Hurnscald que pode ajudá-lo a tornar o seu corpo mais resistente contra certas coisas. Mas o corpo e a mente pertencem um ao outro, então você provavelmente tem que se concentrar para que também.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Other than that, just ask around! There have to be some people who can teach you something...\"";
+    mes "[Luca o Caçador]";
+    mes "\"Fora isso, é só pedir em torno! Tem que haver algumas pessoas que podem te ensinar algo...\"";
     next;
     goto L_Explain_loop;
 
 L_explain_work:
-    mes "[Luca the Hunter]";
-    mes "\"Well, skills allow you to be better in some things, or allow to do what you couldn't do without them. When you've learned a skill and are focusing on it, then it affects what you do.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Bem, habilidades permitem que você seja melhor em algumas coisas, ou permitir fazer o que você não poderia fazer sem eles. Quando você aprendeu uma habilidade e estão se concentrando sobre ele, então isso afeta o que você faz.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"Now, when you start out with a skill, you won't be very good at it yet. But if you keep practicing you'll learn how to get better.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Agora quando você começa com uma habilidade, você não vai ser muito bom no que faz ainda. Mas se você continuar praticando você vai aprender como obter o melhor.\"";
     next;
-    mes "[Luca the Hunter]";
-    mes "\"My old teacher always called that getting `skill points' and that you can see them with [F5], whoever that is.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Meu velho professor sempre chama assim recebendo 'pontos de habilidade' e que você pode vê-los com [F5], quem quer que seja.\"";
     next;
     //TODO:
-    //mes "[Luca the Hunter]";
+    //mes "[Luca o Caçador]";
     //mes "\"She also said that with this [F5] thing you can get better at those skills, and that it costs you as many skill points as the level you want to go to.\"";
     //next;
-    mes "[Luca the Hunter]";
-    mes "\"She always would have one cactus potion too many... but she was an amazing teacher.\"";
-    mes "He nods emphatically.";
+    mes "[Luca o Caçador]";
+    mes "\"Ela sempre teria uma poção cactos demais... mas ela era uma professora incrível.\"";
+    mes "Ele acena com empolgação.";
     next;
     goto L_Explain_loop;
 
 L_teachmore:
-    mes "[Luca the Hunter]";
-    mes "\"Good to see you again!\"";
+    mes "[Luca o Caçador]";
+    mes "\"Que bom te ver de novo!\"";
     next;
     goto L_teachmore2;
 
@@ -234,7 +234,7 @@ L_teachmore2:
     getunactivatedpoolskilllist;
     if (@skilllist_count == 0) goto L_teachmore2_nof;
     set @choices[@choice_nr], @C_focus;
-    set @choice$[@choice_nr], "I would like to focus.";
+    set @choice$[@choice_nr], "Gostaria de concentrar.";
     set @choice_nr, @choice_nr + 1;
     goto L_teachmore2_nof;
 
@@ -242,7 +242,7 @@ L_teachmore2_nof:
     getactivatedpoolskilllist;
     if (@skilllist_count == 0) goto L_teachmore2_nounf;
     set @choices[@choice_nr], @C_unfocus;
-    set @choice$[@choice_nr], "I would like to unfocus.";
+    set @choice$[@choice_nr], "Gostaria de desfocar.";
     set @choice_nr, @choice_nr + 1;
     goto L_teachmore2_nounf;
 
@@ -251,7 +251,7 @@ L_teachmore2_nounf:
         set @choices[@choice_nr], @C_teachbrawling;
     if (getskilllv(SKILL_BRAWLING))
         set @choices[@choice_nr], @C_teachnothing;
-    set @choice$[@choice_nr], "Can you teach me a skill?";
+    set @choice$[@choice_nr], "Você pode me ensinar uma habilidade?";
     set @choice_nr, @choice_nr + 1;
 
     set @choices[@choice_nr], @C_explainagain;
@@ -266,7 +266,7 @@ L_teachmore2_nounf:
 
 L_teachmore2_noovv:
     set @choices[@choice_nr], @C_nvm;
-    set @choice$[@choice_nr], "I'm done for now, thanks!";
+    set @choice$[@choice_nr], "Eu estou pronto agora, grato!";
     set @choice_nr, @choice_nr + 1;
 
     menu
@@ -318,34 +318,34 @@ L_unfocus:
 
     if (MAGIG_FLAGS & MFLAG_KNOWS_UNFOCUS_RECIPE) goto L_nopotion;
 
-    mes "[Luca the Hunter]";
-    mes "\"Unfocusing is one of the harder parts though, because it is sunk in. You see?\"";
+    mes "[Luca o Caçador]";
+    mes "\"Desfocagem é uma das partes mais duras, porque ele está afundado. Você vê?\"";
     next;
-    mes "\"So to remove that mental focus we will need a special potion.\"";
+    mes "\"Então, para remover esse foco mental vamos precisar de uma poção especial.\"";
     next;
-    mes "\"Maybe you should consult some very skilled alchemists.\"";
+    mes "\"Talvez você deve consultar alguns alquimistas muito habilidosos.\"";
     next;
-    mes "\"Ah yes, of course you will need a recipe. Although the alchemist usually knows it.\"";
+    mes "\"Ah sim, é claro que você vai precisar de uma receita. Embora o alquimista normalmente sabe disso.\"";
     next;
-    mes "\"The potion is called Grimace of Dementia. So the alchemist will know for sure.\"";
+    mes "\"A poção é chamado Careta da Demência. Assim, o alquimista vai saber com certeza.\"";
     set MAGIC_FLAGS, MAGIC_FLAGS | MFLAG_KNOWS_UNFOCUS_RECIPE;
     menu
-        "Ok, I will get a Grimace of Dementia potion", L_Close,
-        "Alright, be right back!", L_Close;
+        "Ok, vou conseguir uma poção de careta de Demência", L_Close,
+        "Tudo bem, volto já!", L_Close;
 
 L_nopotion:
-    mes "[Luca the Hunter]";
-    mes "\"Hey, you really need that dementia potion for unfocusing.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Ei, você realmente precisa da poção demência desfocagem.\"";
     next;
-    mes "\"Come back when you've found a suitable alchemist who can mix such a potion.\"";
+    mes "\"Volte quando você encontrar um alquimista adequado que pode misturar essa poção.\"";
     next;
     goto L_teachmore2;
 
 L_unfocus_menu:
-    mes "[Luca the Hunter]";
-    mes "\"Ahh, I see you have a dementia potion.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Ahh, eu vejo que você tem uma poção demência.\"";
     next;
-    mes "\"What skill would you like to unfocus?\"";
+    mes "\"Que habilidade você gostaria de desfocar?\"";
 
     getactivatedpoolskilllist;
 
@@ -376,14 +376,14 @@ L_focus_overview:
     getactivatedpoolskilllist;
 
     if (@skilllist_count != 0) goto L_focus_overview1;
-    mes "[Luca the Hunter]";
-    mes "\"You aren't focused on a skill at the moment.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Você não está focada em uma habilidade no momento.\"";
     next;
     goto L_teachmore2;
 
 L_focus_overview1:
-    mes "[Luca the Hunter]";
-    set @message$, "\"At the moment you are focused on ";
+    mes "[Luca o Caçador]";
+    set @message$, "\"No momento você está focado em ";
     goto L_focus_overview2;
 
 L_focus_overview2:
@@ -400,19 +400,19 @@ L_focus_overview3:
     goto L_teachmore2;
 
 L_teach_brawling:
-    mes "[Luca the Hunter]";
-    mes "\"Well, yes, I can teach you brawling. It's a nice thing, if you have nothing left but your hands to defend yourself.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Bem, sim, eu posso te ensinar brigando. É uma coisa boa, se você não tem mais nada, mas suas mãos para se defender.\"";
     next;
-    mes "He is laughing.";
-    mes "\"And is handy, if some sapling starts getting naughty.\"";
+    mes "Ele está rindo.";
+    mes "\"E é útil, se algum moço começa a ficar desobediente.\"";
     next;
-    mes "He raises his hands in front of his face and clenches his fists.";
-    mes "\"Ok, let's go! Hold your hands like this.\"";
+    mes "Ele levanta as mãos na frente de seu rosto e fecha os punhos.";
+    mes "\"Ok, vamos lá! Mantenha as mãos assim.\"";
     next;
     mes ".......";
     next;
-    mes "Some bruises later.";
-    mes "\"Great! I think, you got it.\"";
+    mes "Alguns machucados depois.";
+    mes "\"Ótimo! Eu acho que, você conseguiu.\"";
     next;
     set @SUP_id, SKILL_BRAWLING;
     set @SUP_lvl, 1;
@@ -422,10 +422,10 @@ L_teach_brawling:
     goto L_Close;
 
 L_teach_nothing:
-    mes "[Luca the Hunter]";
-    mes "\"I was able to teach you brawling. For other professions you should visit someone else.\"";
+    mes "[Luca o Caçador]";
+    mes "\"Eu sou capaz de ensiná-lo a brigar. Para as outras profissões você deve visitar outras pessoas.\"";
     next;
-    mes "\"You see, I am an adventurer. Everybody has his tricks. But you really should visit someone who is a teacher, not an adventurer, now.\"";
+    mes "\"Você vê, eu sou um aventureiro. Todo mundo tem seus truques. Mas você realmente deve visitar alguém que é um professor, não um aventureiro.\"";
     next;
     goto L_teachmore2;
 
