@@ -3,11 +3,11 @@
 001-1.gat,48,79,0|script|Ekinu|104,
 {
     mes "[Ekinu the Town Guard]";
-    mes "\"What a disaster... I can't believe that we managed to rebuild the town so quickly.\"";
+    mes "\"Que desastre ... Eu não posso acreditar que conseguimos reconstruir a cidade tão rapidamente.\"";
     next;
-    menu "Can you give me any tips?", L_Tip,
-         "Do you have any information?", L_Info,
-         "What disaster?", L_disaster;
+    menu "Você pode me dar alguma dica?", L_Tip,
+         "Você tem alguma informação?", L_Info,
+         "Que desastre?", L_disaster;
 
 L_Tip:
     set @TEMP,rand(7);
@@ -21,53 +21,53 @@ L_Tip:
 
 L_1:
     mes "[Ekinu the Town Guard]";
-    mes "\"Try to carry spare food when on quests or in dungeons – they will come in handy. I always take beer, but don't tell the Sergeant...\"";
+    mes "\"Tente levar comida extra em missões ou nos calabouços - que virá a calhar. Eu sempre levo cerveja, mas não diga ao Sargento...\"";
     goto L_Close;
 
 L_2:
     mes "[Ekinu the Town Guard]";
-    mes "\"If you ever get lost, check your map to get your bearings and figure out where you need to go.\"";
+    mes "\"Se você se perder, verifique o seu mapa para se orientar e descobrir onde você precisa ir.\"";
     goto L_Close;
 
 L_3:
     mes "[Ekinu the Town Guard]";
-    mes "\"When in a dungeon, monsters are more aggressive – and often more powerful – than if they were outside.\"";
+    mes "\"Quando em um calabouço, os monstros são mais agressivos - e muitas vezes mais poderoso - do que se estivessem fora.\"";
     goto L_Close;
 
 L_4:
     mes "[Ekinu the Town Guard]";
-    mes "\"When gambling in casinos, make sure to not bet too much or you might become broke.\"";
+    mes "\"Quando jogo em casinos, certifique-se de não apostar muito ou você pode acabar falido.\"";
     goto L_Close;
 
 L_5:
     mes "[Ekinu the Town Guard]";
-    mes "\"Never underestimate your enemy.\"";
+    mes "\"Nunca subestime seu inimigo.\"";
     goto L_Close;
 
 L_6:
     mes "[Ekinu the Town Guard]";
-    mes "\"When fighting more than one enemy, try to focus on one at a time.\"";
+    mes "\"Ao lutar com mais de um inimigo, tente se concentrar em um de cada vez.\"";
     goto L_Close;
 
 L_0:
     mes "[Ekinu the Town Guard]";
-    mes "\"Let me think of something... Oh! Do NOT attack the red or black scorpions unless you're sure you can kill it!\"";
+    mes "\"Deixe-me pensar em algo ... Oh! Não ataque os escorpiões vermelhos ou pretos, a menos que você tem certeza que pode matá-los!\"";
     goto L_Close;
 
 L_Info:
     mes "[Ekinu the Town Guard]";
-    mes "\"Everyone seems to want information... You won't get it – at least not here. I'm not even sure what you mean, to be honest.\"";
+    mes "\"Todo mundo parece querer informações ... Você não vai acha-las - pelo menos não aqui. Eu nem tenho certeza do que você quer dizer, para ser honesto.\"";
     goto L_Close;
 
 L_disaster:
     mes "[Ekinu the Town Guard]";
-    mes "\"What do you mean, 'what disaster?'  Weren't you there?  That huge volcano ex...rusion... – whatever they call it – and then the earthquake!\"";
+    mes "\"O que quer dizer com 'que desastre'? Você não estava lá? Aquela enorme explosão vulcânica ... - o que eles chamam - e depois o terremoto!\"";
     next;
     mes "[Ekinu the Town Guard]";
-    mes "\"Half the town was reduced to rubble!  Somehow, no one was seriously injured, so I guess we were lucky...\"";
+    mes "\"Metade da cidade foi reduzida a escombros! De alguma forma, ninguém ficou gravemente ferido, então eu acho que tivemos sorte...\"";
     next;
     mes "[Ekinu the Town Guard]";
-    mes "\"Well, the mayor rebuilt everything quickly, but I still have no idea where he got all the GP from...\"";
+    mes "\"Bem, o prefeito reconstruiu tudo rapidamente, mas eu ainda não tenho nenhuma idéia de onde ele tirou todo o GP...\"";
     goto L_Close;
 
 L_Close:
@@ -84,13 +84,14 @@ L_Close:
     next;
     mes "[Ryan the Town Guard]";
     mes "\"Hmmmmmmh...?";
-    mes "Oh, what? I wasn't sleeping! I was just resting my eyes!\"";
+    mes "Oh, o quê? Eu não estava dormindo! Eu só estava descansando os olhos!\"";
     close;
 
 L_message:
     mes "[Ryan the Town Guard]";
-    mes "\" Watch out for Black Scorpions. They are extremely dangerous!\"";
+    mes "\" Cuidado com os Escorpiões Pretos. Eles são extremamente perigosos!\"";
     next;
-    mes "\"Whenever one approaches the town gate, Ekinu has me run around shouting '" + getspellinvocation("aggravate") + ".'  Somehow, this distracts it so Ekinu can kill it.\"";
+    mes "\"Sempre que se aproximam da cidade, Ekinu me faz vir correndo gritando '" + getspellinvocation("aggravate") + ".'  De alguma forma, isso o distrai para que Ekinu possa mata-lo.\"";
     close;
+
 }

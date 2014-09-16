@@ -3,8 +3,8 @@
 001-1.gat,29,50,0|script|Candide|156,
 {
     mes "[Candide]";
-    mes "\"I've figured out how that volcanic ash bleaches cloth.";
-    mes "I could do it for you, but I'll need three piles of ash and 5,000 GP for supplies per item.\"";
+    mes "\"Eu descobri como pinhas de cinzas vulcânicas podem pintar tecidos.";
+    mes "Eu posso fazer isso para você, Mas eu vou precisar de três pilhas cinzas e 5,000 GP para suprimentos por item.\"";
     next;
 
     if (countitem("PileOfAsh") < 3) goto L_no_ash;
@@ -12,37 +12,37 @@
     if (Zeny < 5000) goto L_no_money;
 
     menu
-        "I'd like to bleach something.", L_bleach_menu,
-        "No thanks.", L_Close;
+        "Eu gostaria de pintar alguma coisa.", L_bleach_menu,
+        "Não obrigado.", L_Close;
 
 L_bleach_menu:
     mes "[Candide]";
-    mes "\"What would you like to bleach?\"";
+    mes "\"Oque você gostaria de pintar?\"";
     next;
 
     menu
-        "Cotton shirt.", L_cottonshirt,
-        "V-Neck sweater.", L_vneck,
-        "Turtleneck sweater.", L_tneck,
-        "Cotton shorts.", L_shorts,
-        "Cotton trousers.", L_trousers,
-        "Cotton skirt.", L_skirt,
-        "Miniskirt.", L_miniskirt,
-        "Tank top .", L_tanktop,
-        "Short tank top.", L_tanktop_short,
-        "Silk robe.", L_robe,
-        "Cotton headband.", L_cotton_headband,
-        "Desert hat.", L_desert_hat,
-        "Cotton boots.", L_cotton_boots,
-        "Cotton gloves.", L_cotton_gloves,
-        "Rabbit ears.", L_rabbit_ears,
-        "Wizard hat.", L_wizard_hat,
-        "Bowler hat.", L_bowler_hat,
-        "Sorcerer robe.", L_sorcerer_robe,
-        "Bowler hat (brown).", L_bowler_hat_brown,
-        "Fine dress.", L_fine_dress,
-        "Cotton cloth.", L_cotton_cloth,
-        "Nevermind.", L_Close;
+        "Camisa de Algodão.", L_cottonshirt,
+        "Suéter com decote em V.", L_vneck,
+        "Suéter de Gola Alta.", L_tneck,
+        "Short de algodão.", L_shorts,
+        "Calça de Algodão.", L_trousers,
+        "Saia de Algodão.", L_skirt,
+        "Minisaia.", L_miniskirt,
+        "Camiseta.", L_tanktop,
+        "Camiseta Curta.", L_tanktop_short,
+        "Túnica de Seda.", L_robe,
+        "Faixa Tradicional.", L_cotton_headband,
+        "Chapéu do Deserto.", L_desert_hat,
+        "Botas de Algodão.", L_cotton_boots,
+        "Luvas de Algodão.", L_cotton_gloves,
+        "Orelhas de Coelho.", L_rabbit_ears,
+        "Chapéu de Mago.", L_wizard_hat,
+        "Chapéu-coco.", L_bowler_hat,
+        "Robe de Feiticieiro.", L_sorcerer_robe,
+        "Chapéu-coco (marrom).", L_bowler_hat_brown,
+        "Vestido.", L_fine_dress,
+        "Pano de Algodão.", L_cotton_cloth,
+        "Hoje não, obrigado.", L_Close;
 
 L_cottonshirt:
     set @normal, 1202;
@@ -131,21 +131,21 @@ L_bowler_hat:
 
 L_sorcerer_robe:
     mes "[Candide]";
-    mes "\"Which one?\"";
+    mes "\"Qual?\"";
     next;
     menu
-        "A red lined one.", L_red_lined_sorcerer_robe,
-        "A green lined one.", L_green_lined_sorcerer_robe,
-        "A dark blue lined one.", L_dark_blue_lined_sorcerer_robe,
-        "A yellow lined one.", L_yellow_lined_sorcerer_robe,
-        "A light blue lined one.", L_light_blue_lined_sorcerer_robe,
-        "A pink lined one.", L_pink_lined_sorcerer_robe,
-        "A black lined one.", L_black_lined_sorcerer_robe,
-        "An orange lined one.", L_orange_lined_sorcerer_robe,
-        "A purple lined one.", L_purple_lined_sorcerer_robe,
-        "A dark green lined one.", L_dark_green_lined_sorcerer_robe,
-        "A white lined one.", L_white_lined_sorcerer_robe,
-        "Nevermind.", L_Close;
+        "Listras vermelhas.", L_red_lined_sorcerer_robe,
+        "Listras verdes.", L_green_lined_sorcerer_robe,
+        "Listras azul escuras.", L_dark_blue_lined_sorcerer_robe,
+        "Listras amarelas.", L_yellow_lined_sorcerer_robe,
+        "Listras azul claras.", L_light_blue_lined_sorcerer_robe,
+        "Listras rosas.", L_pink_lined_sorcerer_robe,
+        "Listras pretas.", L_black_lined_sorcerer_robe,
+        "Listras laranja.", L_orange_lined_sorcerer_robe,
+        "Listras roxas.", L_purple_lined_sorcerer_robe,
+        "Listras verde escuras.", L_dark_green_lined_sorcerer_robe,
+        "Listras brancas.", L_white_lined_sorcerer_robe,
+        "Esqueçe.", L_Close;
 
 L_red_lined_sorcerer_robe:
     set @normal, 798;
@@ -219,20 +219,20 @@ L_cotton_cloth:
 
 L_choose_color:
     mes "[Candide]";
-    mes "\"And the color?\"";
+    mes "\"E a cor?\"";
     next;
 
     menu
-        "Red.", L_MenuItems,
-        "Green.", L_MenuItems,
-        "Dark Blue.", L_MenuItems,
-        "Yellow.", L_MenuItems,
-        "Light Blue.", L_MenuItems,
-        "Pink.", L_MenuItems,
-        "Black.", L_MenuItems,
-        "Orange.", L_MenuItems,
-        "Purple.", L_MenuItems,
-        "Dark Green.", L_MenuItems;
+        "Vermelho.", L_MenuItems,
+        "Verde.", L_MenuItems,
+        "Azul escuro.", L_MenuItems,
+        "Amarelo.", L_MenuItems,
+        "Azul claro.", L_MenuItems,
+        "Rosa.", L_MenuItems,
+        "Preto.", L_MenuItems,
+        "Laranja.", L_MenuItems,
+        "Roxo.", L_MenuItems,
+        "Verde escuro.", L_MenuItems;
 
 L_MenuItems:
     set @del, @dyeBase + @menu - 1;
@@ -251,35 +251,35 @@ L_MenuItems:
 
 L_again:
     mes "[Candide]";
-    mes "\"Would you like to bleach something else?\"";
+    mes "\"Gostaria de pintar alguma coisa?\"";
     next;
 
     menu
-        "Yes.", L_bleach_menu,
-        "No.", L_Close;
+        "Sim.", L_bleach_menu,
+        "Não.", L_Close;
 
 L_no_item:
     mes "[Candide]";
-    mes "\"You don't have one of those.\"";
+    mes "\"Você não tem oque preciso.\"";
     next;
 
     goto L_again;
 
 L_no_ash:
     mes "[Candide]";
-    mes "\"You don't have enough ash for me to bleach anything.";
-    mes "I need three piles.\"";
+    mes "\"Você não tem pilhas de cinzas para poder pitar algo.";
+    mes "Eu preciso de três pilhas de cinzas.\"";
     goto L_Close;
 
 L_no_money:
     mes "[Candide]";
-    mes "\"You don't have enough gold for me to bleach anything.";
-    mes "I need 5,000 GP for supplies.\"";
+    mes "\"Você não tem dinheiro para poder pitar algo.";
+    mes "Eu preciso de 5,000 GP para suprimentos.\"";
     goto L_Close;
 
 L_Close:
     mes "[Candide]";
-    mes "\"Come again.\"";
+    mes "\"Volte sempre.\"";
     set @normal, 0;
     set @dyeBase, 0;
     set @del, 0;

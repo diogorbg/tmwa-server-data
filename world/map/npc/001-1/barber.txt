@@ -1,12 +1,10 @@
-//
-
 001-1.gat,52,36,0|script|Nicolas|100,
 {
-    mes "[Nicolas the Barber]";
-    mes "\"Do you need a barber?\"";
+    mes "[Nicolas o barbeiro]";
+    mes "\"Você precisa de um barbeiro?\"";
     next;
     callfunc "Barber";
-    mes "[Nicolas the Barber]";
-    mes "\"Come again!\"";
+    mes "[Nicolas o barbeiro]";
+    mes "\"Volte sempre!\"";
     close;
 }

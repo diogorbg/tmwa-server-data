@@ -56,28 +56,28 @@ function|script|ElanoreFix|,
 L_Heal1:
 
     mes "[Elanore the Healer]";
-    mes "\"You don't look too well; let me treat your wounds.\"";
+    mes "\"Você não me parece muito bem... Deixe-me cuidar de você.\"";
     next;
     goto L_Heal_L;
 
 L_Heal2:
 
     mes "[Elanore the Healer]";
-    mes "\"I will make quick work of your wounds.\"";
+    mes "\"Deixe eu cuidar desses seus ferimentos.\"";
     next;
     goto L_Heal_L;
 
 L_Heal3:
 
     mes "[Elanore the Healer]";
-    mes "\"Need a healing?\"";
+    mes "\"Precisando de cura?\"";
     next;
     goto L_Heal_L;
 
 L_Heal4:
 
     mes "[Elanore the Healer]";
-    mes "\"Sometimes you just need to run from battle.\"";
+    mes "\"As vezes você só precisa correr das lutas.\"";
     next;
     goto L_Heal_L;
 
@@ -91,28 +91,28 @@ L_Heal_L:
 L_Heal_1:
 
     mes "[Elanore the Healer]";
-    mes "\"Here you go!\"";
+    mes "\"Aqui vamos nós!\"";
     heal 10000,10000;
     goto L_Close;
 
 L_Heal_2:
 
     mes "[Elanore the Healer]";
-    mes "\"Painless, wasn't it?";
+    mes "\"Nem doeu! Certo?";
     heal 10000,10000;
     goto L_Close;
 
 L_Heal_3:
 
     mes "[Elanore the Healer]";
-    mes "\"You should be more careful.\"";
+    mes "\"Você precisa tomar mais cuidado!\"";
     heal 10000,10000;
     goto L_Close;
 
 L_Heal_4:
 
     mes "[Elanore the Healer]";
-    mes "\"Much better, right?!\"";
+    mes "\"Muito melhor, né?\"";
     heal 10000,10000;
     goto L_Close;
 
@@ -123,36 +123,36 @@ L_NoHeal:
 
 L_NoHealMessage:
     mes "[Elanore the Healer]";
-    mes "\"I'm sorry but unless you are young and in need, I can't help you, and your level is already higher than ten.";
-    mes "With so many people still injured from the earthquake, I really have no time to help.";
-    mes "You can get some rest in the inn near here.\"";
+	mes "\"Me desuclpe mais você é muito novo para isso, eu não posso ajudar você, a não ser que seu level seja maior que dez.";
+	mes "Muita gente está machucada por conta do terremoto, eu realmente não tenho tempo para lhe ajudar.";
+	mes "Você pode descansar no bar aqui perto.\"";
     goto L_Close;
 
 L_Chat:
     mes "[Elanore the Healer]";
-    mes "\"Hello!  Can I help you?\"";
+    mes "\"Olá! Posso lhe ajudar?\"";
     next;
     goto L_Main;
 
 L_Main:
     if (@has_magic && (@Q_status == @STATUS_INITIAL))
         menu
-            "Can you heal me?", L_NoHealMessage,
-            "Can you teach me magic?", L_Teach,
-            "What do you know about...", L_Question,
-            "Goodbye!", L_bye;
+            "Poderia me curar?", L_NoHealMessage,
+            "Pode me ensinar algo sobre magia?", L_Teach,
+            "O que você sabe sobre...", L_Question,
+            "Até mais!", L_bye;
     if (@has_magic && (@Q_status > @STATUS_INITIAL))
         menu
-            "Can you heal me?", L_NoHealMessage,
-            "Can you teach me more?", L_Teach,
-            "Where can I get more lifestones?", L_Lifestones,
-            "What do you know about...", L_Question,
-            "Goodbye!", L_bye;
+            "Poderia me curar?", L_NoHealMessage,
+            "Pode me ensinar mais?", L_Teach,
+            "Onde eu consigo mais Lifestones?", L_Lifestones,
+            "O que você sabe sobre...", L_Question,
+            "Até mais!", L_bye;
     if (!@has_magic)
         menu
-            "Can you heal me?", L_NoHealMessage,
-            "What do you know about...", L_Question,
-            "Goodbye!", L_bye;
+            "Poderia me curar?", L_NoHealMessage,
+            "O que você sabe sobre...", L_Question,
+            "Até mais!", L_bye;
     goto L_Close;
 
 OnPCKillEvent:
@@ -173,13 +173,13 @@ L_OnPcKillFinish:
 
 L_Lifestones:
     mes "[Elanore the Healer]";
-    mes "\"I always need components for my own healing spells. If you bring me ten gamboge leaves, ten alizarin leaves, ten mauve leaves and ten cobalt leaves, I can make ten lifestones; I will give you half of them.\"";
-    next;
+    mes "\"Eu sempre preciso de alguns componentes para fazer minhas magias. Se me trouxer dez ervas gamboge, dez ervas alizarinas, dez ervas mauvas e dez ervas cobalto, Eu posso fazer dez lifestones; Te darei metade deles.\"";
+	next;
     menu
-        "OK, I will get them.", L_Close,
-        "No way!", L_Close,
-        "Here you are!", L_Lifestones_Trade,
-        "Can I make them myself?", L_Lifestones_MakeSelf;
+        "OK, vou pegar.", L_Close,
+        "Nunca!", L_Close,
+        "Aqui estão!", L_Lifestones_Trade,
+        "Eu consigo fazer sozinho?", L_Lifestones_MakeSelf;
 
 L_Lifestones_Trade:
     if (countitem("MauveHerb") < 10) goto L_Lifestones_Trade_Missing;
@@ -200,26 +200,26 @@ L_Lifestones_Trade:
     getitem "Lifestone", 5;
     getexp 200, 1;
     mes "[Elanore the Healer]";
-    mes "Elanore carefully goes over your leaves, then smiles.";
-    mes "\"These will do just fine.\"";
-    mes "She picks up all fourty and presses them together in her hands, then whispers something.";
+	mes "Elanore cuidadosamente pega suas folhas, então sorri.";
+    mes "\"Isto me parece bom.\"";
+    mes "Ela pega as quarenta folhas então preciona todas juntas em suas mãos, e susurra algo.";
     next;
     mes "[Elanore the Healer]";
-    mes "As she opens her hands again, the leaves have turned into ten golden crystals.";
-    mes "\"Five for you and five for me.\"";
-    mes "She smiles.";
+    mes "Ela abre suas mãos de novo, e no lugar das folhas estão 10 cristais brilhantes.";
+    mes "\"Cinco para você e cinco para mim.\"";
+    mes "Ela sorri.";
     mes "[200 experience points]";
     goto L_Close;
 
 L_Lifestones_NoRoom:
     mes "[Elanore the Healer]";
-    mes "\"Oh... it seems that you have no room for the lifestones. But please do come back later when you have made a little space.\"";
+    mes "\"Oh... Me parece que você não tem lugar para os lifestones. Más volte mais tarde quando tiver mais espaço.\"";
     goto L_Close;
 
 L_Lifestones_Trade_Missing:
     mes "[Elanore the Healer]";
-    mes "Elanore counts the leaves you show her.";
-    mes "\"No, I am sorry. Please bring me ten leaves each of gamboge, alizarin, mauve, and cobalt.\"";
+    mes "Elanore conta as folhas que você deu a ela.";
+    mes "\"Não, me desculpa. Por favor traga-me dez de cada gamboges, alizarinas, mauves, e cobaltas.\"";
     goto L_Close;
 
 L_Lifestones_MakeSelf:
@@ -228,11 +228,11 @@ L_Lifestones_MakeSelf:
     goto L_Lifestones_MakeSelf_yes;
 
 L_Lifestones_MakeSelf_yes:
-    mes "\"Oh, but of course!  You are powerful enough to make your own lifestones, using the enchantment '" + getspellinvocation("enchant-lifestone") + "'. This will consume a bug leg or a maggot slime or one of each of the four healing herbs, though.\"";
+    mes "\"Oh, mais que legal! Você está forte o suficiente para fazer seus próprios lifestones, usando o encantamento '" + getspellinvocation("enchant-lifestone") + "'. Isso ira consumir uma perna de inseto ou uma gosma verde ou uma de cada tipo de ervas.\"";
     goto L_Close;
 
 L_Lifestones_MakeSelf_no:
-    mes "\"No, you are not powerful enough yet. Please come back and ask me again when you have learned to control more powerful magic, though!\"";
+    mes "\"Não. você ainda não me parece tão forte. Por favor volte e fale comigo de novo quando tiver mais controle sobre sua magia.\"";
     goto L_Close;
 
 L_Teach:
@@ -245,33 +245,33 @@ L_Teach:
     if (@Q_status == @STATUS_LEARNED_CURE_POISON) goto L_Teach_dunno;
 
     mes "[Elanore the Healer]";
-    mes "\"You have made good progress, but you lack the magical power to advance further. Also, I would like to observe you some more to be certain that you will make a good healer.\"";
+    mes "\"Você tem tido um bom progresso, más seu poder magico avançará no futuro. Mas, eu gostaria de lhe observar um pouco mais para me certificar que será um bom curandeiro.\"";
     goto L_Close;
 
 L_Teach_Initial:
     mes "[Elanore the Healer]";
-    mes "\"I will only teach you magic of the school of Life, and that only if you prove yourself to be a good healer – that is, if you use your powers to help others.\"";
-    mes "She hesistates.";
+    mes "\"Eu só poderei te ensinar a magia vinda da Escola da Cura. E o farei caso me prove que será um bom curandeiro - isto é, caso queira usar seu poder para ajudar os outros.\"";
+    mes "Ela hesita.";
     next;
     mes "[Elanore the Healer]";
-    mes "\"I don't know you very well, but I don't think that there is any harm in teaching you a simple spell.\"";
-    mes "She reaches inside her satchel and pulls out a piece of crystal, glittering in the sun.";
-    mes "\"This here is a lifestone, life energy encased in a crystal shell. You will need it for most healing magic.\"";
+    mes "\"Eu não te conheço muito bem, mais eu acho que não tem problema nenhum te ensinar uma magia basica de cura.\"";
+    mes "\"Ela entra em sua barraca e volta com um pequeno pedaço de cristal, reluzente ao sol.";
+    mes "\"Aqui está um lifestone, energia vital num cristal. Você vai usar ele para sua magia de cura.\"";
     next;
     mes "[Elanore the Healer]";
-    mes "\"To heal someone, first locate the injury. As a beginner, you have to touch the wound; with practice, it will be enough to think about it. Hold the lifestone in one hand, touching the wound with the other.\"";
-    mes "\"Then say, '" + getspellinvocation("lesser-heal") + "', followed by the name of the one you wish to heal.\"";
+    mes "\"Para curar alguém, primeiro ache a ferida. Como você é um iniciante, terá que toca-la. Segure o lifestone em uma mão, tocando a ferida com a outra.\"";
+    mes "\"E então diga, '" + getspellinvocation("lesser-heal") + "', seguindo do nome de quem quer curar.\"";
     next;
     mes "[Elanore the Healer]";
-    mes "\"You might want to write that down, actually. In fact, you might want to make sure to keep notes of all spells you hear, for you never know if you will hear them again!\"";
-    mes "\"The invocation was '" + getspellinvocation("lesser-heal") + "'.\"";
+    mes "\"Talvez você queira anotar isso em algum lugar. De fato, você talvez tenha que manter uma nota com todas as magias que escuta, nunca se sabe se vai as ouvir novamente!\"";
+    mes "\"A conjuração é '" + getspellinvocation("lesser-heal") + "'.\"";
     next;
     mes "[Elanore the Healer]";
-    mes "\"This will only cure cuts and bruises, though, and it will take some time to take effect. It will be useless to mend broken bones or more severe injuries!\"";
-    mes "\"To heal yourself, it's enough to just say '" + getspellinvocation("lesser-heal") + "' by itself.\"";
+    mes "\"Essa só vai curar cortes e contusões, e ela leva certo tempo para fazer efeito. Ela não será útil para ossos quebrados ou feridas mais sérias!\"";
+    mes "\"Para curar a si mesmo, só é necessario dizer '" + getspellinvocation("lesser-heal") + "'.\"";
     next;
     mes "[Elanore the Healer]";
-    mes "\"Let me give you a lifestone to get started with.\"";
+    mes "\"Deixe-me dar um lifestone para você praticar.\"";
     next;
     getinventorylist;
     if ((@inventorylist_count == 100) && (countitem("Lifestone") == 0)) goto L_Teach_Initial_Noroom;
@@ -280,40 +280,40 @@ L_Teach_Initial:
     callsub S_update_var;
 
     mes "[Elanore the Healer]";
-    mes "Elanore hands you the crystal.";
-    mes "\"Here you are. I hope that it will allow you to do good!\"";
+    mes "Elanore entrega o cristal a você.";
+    mes "\"Vamos lá. Eu espero que você consiga completar com exito!\"";
     goto L_Close;
 
 L_Teach_Initial_Noroom:
     mes "[Elanore the Healer]";
-    mes "\"Oh... you managed to put things into every little nook and pocket, haven't you?  Well, come back later, I will give it to you then.\"";
+    mes "\"Oh... você não pode mais carregar coisinhas na sua bolsa, não é?  Certo, volte depois, e então e lhe darei isto.\"";
     goto L_Close;
 
 L_Teach_CheckAdvanceTo2:
     mes "[Elanore the Healer]";
     if (@Q_heal_exp < 20) goto L_Teach_CheckAdvanceTo2_fail;
-    mes "Elanore smiles at you.";
-    mes "\"From what I have been hearing, you seem to be doing well on your way to becoming a healer. I have decided to accept you as a student of the School of Life Magic.\"";
+    mes "Elanore sorri para você.";
+    mes "\"Pelo que tenho ouvido, você tem procurado fazer de tudo para virar um curandeiro. Eu decidi te aceitar como estudante da Escola da Magia da Cura.\"";
     next;
     if (getskilllv(SKILL_MAGIC) < 2) goto L_Teach_AdvanceTo2_warn;
     goto L_Teach_AdvanceTo2_skip;
 
 L_Teach_AdvanceTo2_warn:
     mes "[Elanore the Healer]";
-    mes "\"But be warned:  you won't be able to use advanced healing magic until you are more capable in your regular magic usage.\"";
+    mes "\"Más ja vou avisando: Você será incapaz de avançar com a magia de cura enquanto não avançar sua magia basica.\"";
     next;
     goto L_Teach_AdvanceTo2_skip;
 
 L_Teach_AdvanceTo2_skip:
     mes "[Elanore the Healer]";
-    mes "\"Please stand still.\"";
-    mes "She walks up to you, holds your shoulders, and smiles at you.";
+    mes "\"Por favor, fique parado.\"";
+    mes "Ela caminha até você, mexe seus ombros, e sorri para você.";
     next;
     mes "[Elanore the Healer]";
-    mes "Then, she rises up on her tiptoes and kisses you on your forehead.";
+    mes "Então, então ela fica na ponta dos pés e da um beijo em sua testa.";
     next;
     mes "[Elanore the Healer]";
-    mes "You feel a strange, tingling kind of warmth spread through your body.";
+    mes "Você se sente estranho, seu corpo começa a esquentar e a formigar.";
     set @Q_status, @STATUS_MASTERED_LIGHT_HEAL;
     callsub S_update_var;
     set @SUP_xp, 5000;
@@ -322,13 +322,13 @@ L_Teach_AdvanceTo2_skip:
     goto L_Close;
 
 L_Teach_CheckAdvanceTo2_fail:
-    mes "\"I think I would like to observe you for a little longer to see if you would make a good healer.\"";
+    mes "\"Imagino que eu precise te observar um pouco mais para ver se você será um bom curandeiro.\"";
     if (@Q_heal_exp < 5)
-        mes "\"You are still at the beginning of your path, but do keep practicing.\"";
+        mes "\"Você ainda está no inicio do seu caminho, continue praticando.\"";
     if ((@Q_heal_exp >= 5) && (@Q_heal_exp < 15))
-        mes "\"You are making progress, but you still need more practice.\"";
+        mes "\"Você está fazendo progresso, porém, ainda precisa praticar um pouco mais.\"";
     if (@Q_heal_exp >= 15)
-        mes "\"You have made good progress, but please do continue in your efforts.\"";
+        mes "\"Você tem feito um bom progresso, más por favor continue com seus esforços.\"";
     goto L_Close;
 
 L_Teach_CheckAdvanceToLOH:
@@ -577,20 +577,20 @@ L_Q_auldsbel:
 
 L_CurePoison:
     mes "[Elanore the Healer]";
-    mes "\"Oh dear!  That looks like poison; hang on...\"";
-    mes "She performs a complicated gesture.";
+    mes "\"Oh querido!  Isso me parece um veneno; Aguente...\"";
+    mes "Ela faz um gesto complicado";
         sc_end(sc_poison);
         sc_end(sc_slowpoison);
     misceffect sfx_magic_life, strcharinfo(0);
     misceffect sfx_magic_life;
     next;
     mes "[Elanore the Healer]";
-    mes "\"There you are, right as rain!  Now you take care, all right?\"";
+    mes "\"Pronto, novinho em folha!  Agora tomará mais cuidado, certo?\"";
     goto L_Close;
 
 L_bye:
     mes "[Elanore the Healer]";
-    mes "\"Goodbye!\"";
+    mes "\"Adeus!\"";
     goto L_Close;
 
 L_Close:

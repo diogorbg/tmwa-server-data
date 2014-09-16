@@ -16,74 +16,74 @@
 
 L_1:
     mes "[Aisha]";
-    mes "\"Maggots are soo slimey!\"";
+    mes "\"Vermes são gosmentos!\"";
     goto L_Close;
 
 L_2:
     mes "[Aisha]";
-    mes "\"Want to play ball with me?\"";
+    mes "\"Quer jogar bola comigo?\"";
     goto L_Close;
 
 L_3:
     mes "[Aisha]";
-    mes "\"There are so many monsters; I hate scorpions!\"";
+    mes "\"Há tantos monstros; Eu odeio escorpiões!\"";
     goto L_Close;
 
 L_4:
     mes "[Aisha]";
-    mes "\"When I grow up, I want to be strong enough to kill a scorpion!\"";
+    mes "\"Quando eu crescer, quero ser forte o suficiente para matar um escorpião!\"";
     goto L_Close;
 
 L_5:
     mes "[Aisha]";
-    mes "\"Mommy told me that you can sell the things that monsters drop.\"";
+    mes "\"Mamãe me disse que você pode vender as coisas que os monstros deixam cair quando morrem.\"";
     goto L_Close;
 
 L_6:
     mes "[Aisha]";
-    mes "\"Have you tried to eat a roasted maggot?  They are sooo yummy!  And you feel much healthier afterwards, too!\"";
+    mes "\"Você já tentou comer um verme assado? Eles são tão gostosos! E você se sente muito mais saudável depois, também!\"";
     goto L_Close;
 
 L_7:
     mes "[Aisha]";
-    mes "\"I want to be a Doctor when I grow up!\"";
+    mes "\"Eu quero ser uma médica quando crescer!\"";
     goto L_Close;
 
 L_8:
     mes "[Aisha]";
-    mes "\"That volcano was sooo scary!  The earth was shaking and everything was breaking down... but now they have rebuilt everything.\"";
+    mes "\"Esse vulcão estava tão assustador! A terra estava tremendo e tudo estava quebrando ... mas agora eles reconstruíram tudo.\"";
     goto L_Close;
 
 L_9:
-    mes "\"I know a very bad word. But I must not say it, because monsters will come and get me if I do!\"";
+    mes "\"Eu sei uma palavra muito feia. Mas não devo dizê-la, porque monstros vão vir e me pegar se eu falar!\"";
     next;
     menu
-        "A bad word?", L_tell,
-        "Oh, you better keep it for yourself then.", L_Close;
+        "Palavra feia?", L_tell,
+        "Oh, é melhor mantê-los longe, então.", L_Close;
 
 L_tell:
     mes "[Aisha]";
-    mes "\"Yes, I heard my mother say it once. And she made me promise her to never say it. Never.\"";
+    mes "\"Sim, eu ouvi minha mãe dizer uma vez. E ela me fez prometer a ela para nunca falar. Nunca.\"";
     next;
     menu
-        "If I promise to never tell anyone, can you tell me the word?", L_keepword,
-        "I understand, you do not need to tell me...", L_giveword,
-        "Goodbye!", L_Close;
+        "Se eu prometer nunca contar a ninguém, você pode me dizer a palavra?", L_keepword,
+        "Eu entendo, você não precisa me dizer...", L_giveword,
+        "Xau!", L_Close;
 
 L_keepword:
     mes "[Aisha]";
-    mes "\"No.\"";
+    mes "\"Não.\"";
     goto L_Close;
 
 L_giveword:
     mes "[Aisha]";
-    mes "Aisha looks around as she hushes you to silence. After a few seconds, she whispers to you.";
-    mes "\"I like you!  So I will tell you the bad word. But you can't tell anyone else about it!  The bad word is '" + getspellinvocation("aggravate") + "'.\"";
+    mes "Aisha olha em volta enquanto ela faz silêncio. Depois de alguns segundos, ela sussurra para você.";
+    mes "\"Eu gosto de você! Então eu vou lhe dizer a palavra má. Mas você não pode contar a ninguém sobre isso! A palavra má é'" + getspellinvocation("aggravate") + "'.\"";
     next;
 
     mes "[Aisha]";
-    mes "Terrified, she looks around once more.";
-    mes "\"But you mustn't tell anyone!\"";
+    mes "Aterrorizada, ela olha em volta mais uma vez.";
+    mes "\"Mas você não deve contar a ninguém!\"";
     goto L_Close;
 
 L_Close:

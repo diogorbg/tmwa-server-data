@@ -11,12 +11,12 @@
     set @vincent, ((QUEST_SouthTulimshar & NIBBLE_2_MASK) >> NIBBLE_2_SHIFT);
     set @sandra, ((QUEST_SouthTulimshar & NIBBLE_3_MASK) >> NIBBLE_3_SHIFT);
 
-    mes "[Gladys, Town Gossip]";
-    mes "\"Hello deary!  I hear some of the most fascinating rumors and bits of news. I just heard a bit more today!\"";
-    mes "\"Would you like me to let you in on the good stuff?\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Olá! Ouço alguns dos rumores mais fascinantes e pedaços de notícias. Acabei de ouvir um pouco mais hoje!\"";
+    mes "\"Gostaria que ue lhe contasse algumas?\"";
     menu
-        "Sure!", L_Yes,
-        "No thanks.", L_No;
+        "Claro!", L_Yes,
+        "Não obrigado.", L_No;
 
 L_Yes:
     if (@bermik < 4)  goto L_Intro;
@@ -28,64 +28,64 @@ L_Yes:
     goto L_Ferry;
 
 L_No:
-    mes "[Gladys, Town Gossip]";
-    mes "\"Very well. Come back whenever you like. I am always getting juicy bits of news!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Tudo bem. Volte quando quiser. Eu sempre tenho alguns pedaços de notícias!\"";
     goto L_Close;
 
 L_Intro:
-    mes "[Gladys, Town Gossip]";
-    mes "\"Have you met our lovely guard captain yet?  He usually keeps a post just outside the gates where he can keep an eye on things. He likes to talk to new adventurers too.\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Já conheceu nosso capitão da guarda? Ele geralmente mantém um posto do lado de fora dos portões, onde ele pode manter um olho nas coisas. Ele gosta de falar com novos aventureiros também.\"";
     next;
-    mes "[Gladys, Town Gossip]";
-    mes "\"I also overheard some of the children in the square talking today. I think they are having trouble with some of their chores. Kids these days...\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Eu também ouvi algumas das crianças na praça falando hoje. Eu acho que eles estão tendo problemas com algumas das suas tarefas. As crianças hoje em dia...\"";
     next;
-    mes "The old lady trails off and starts muttering to herself about hills and snow. Perhaps it's best to leave her alone for now.";
+    mes "A velha senhora começa a murmurar para si mesma sobre colinas e neve. Talvez seja melhor deixá-la sozinha por enquanto.";
     goto L_Close;
 
 L_Mik:
-    mes "[Gladys, Town Gossip]";
-    mes "\"That nice young boy Bernard gave me some of the soup you helped him make. It was lovely!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Esse rapaz agradável Bernard deu-me um pouco da sopa que você ajudou a fazer. Foi agradável!\"";
     next;
-    mes "[Gladys, Town Gossip]";
-    mes "\"One of the ladies in my quilting club mentioned giving a task to her grandson. I have my doubts about whether he ever finished it...\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Uma das senhoras em meu clube de costura tinha mencionado dar uma tarefa para seu neto. Eu tenho minhas dúvidas sobre ele jer terminado...\"";
     goto L_Close;
 
 L_Sarah:
-    mes "[Gladys, Town Gossip]";
-    mes "\"Ethel, the lady in my quilting club, told me you helped her grandson with his chore. That was awfully nice of you!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Ethel, a senhora no meu clube de custura, me disse que você ajudou seu neto com a sua tarefa. Isso foi muito simpático de sua parte!\"";
     next;
-    mes "[Gladys, Town Gossip]";
-    mes "\"Do you believe what parents will let their kids do these days?!  I heard about this girl at the far side of town who does nothing but eat sweets all day!  Honestly, what is the world coming to?\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Você acredita no que os pais deixam seus filhos fazer hoje em dia ?! Eu ouvi sobre essa garota no outro lado da cidade que nada faz além de comer doces todos os dias! Honestamente, onde é que o mundo vai parar?\"";
     goto L_Close;
 
 L_Vinc:
-    mes "[Gladys, Town Gossip]";
-    mes "\"I just got news of an exciting new business opportunity!  There's supposed to be a new entrepreneur in town somewhere making toys. You should get in on the ground floor!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Acabei de receber a notícia de uma oportunidade de negócio novo e excitante! Não é ser ser um novo empresário na cidade fazendo brinquedos. Você pode entrar nessa enquanto está dando lucro!\"";
     goto L_Close;
 
 L_Sandra:
-    mes "[Gladys, Town Gossip]";
-    mes "\"How's that toy business working out? Pretty good tip, huh?\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Como é que as empresas de brinquedos trabalham lá fora? Muito boa dica, hein?\"";
     next;
-    mes "[Gladys, Town Gossip]";
-    mes "\"I've been hearing reports of you all over town!  I think there's only one little girl you haven't assisted, but she's a strange one...always messing about with bugs. Yuck!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Eu tenho ouvido relatos de que toda a cidade! Eu acho que há apenas uma menina que não tem ajudado, mas ela é uma estranha ... sempre mexe com insetos. Eca!\"";
     goto L_Close;
 
 L_Desert:
-    if (Sex == 0) set @person$, "gal";
-    if (Sex == 1) set @person$, "guy";
+    if (Sex == 0) set @person$, "moça";
+    if (Sex == 1) set @person$, "rapaz";
 
-    mes "[Gladys, Town Gossip]";
-    mes "\"Well, if it isn't " + strcharinfo(0) + "!  Our local hero and supernice " + @person$ + ".\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Veja se não é " + strcharinfo(0) + "!  Nosso herói local e super agradável " + @person$ + ".\"";
     mes "\"The whole town is buzzing about you now!\"";
     next;
-    mes "[Gladys, Town Gossip]";
-    mes "\"If you're still looking for adventure, I would suggest talking to some of the guards. I hear there is a monster threat outside the city walls!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "\"Se você ainda está à procura de aventura, gostaria de sugerir a falar com alguns dos guardas. Ouvi dizer que há uma ameaça monstro fora dos muros da cidade!\"";
     goto L_Close;
 
 L_Ferry:
-    mes "[Gladys, Town Gossip]";
-    mes "I heard that there is a handsome sailor in the north of town who will take people to exotic new places!  I'm saving my pennies!\"";
+    mes "[Gladys Fofoqueira]";
+    mes "Ouvi dizer que há um marinheiro bonito no norte da cidade, que vai levar as pessoas a novos lugares exóticos! Estou guardando meus tostões!\"";
     goto L_Close;
 
 L_Close:

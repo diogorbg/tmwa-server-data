@@ -18,20 +18,20 @@
 
 L_Opening0:
     mes "[Bernard]";
-    mes "\"Tulimshar is crawling with maggots. Hey, I need a favor, could you help me a bit?\"";
+    mes "\"Tulimshar está cheio de vermes. Hey, eu preciso de um favor, você pode me ajudar?\"";
     next;
     goto L_Ask;
 
 L_Opening1:
     mes "[Bernard]";
-    mes "\"The taste of maggots in soup is... unforgettable, they taste simply divine!  Would you help me kill some?\"";
+    mes "\"Verme assado com sopa é... maravilhoso, simplesmente divino!  Pode me ajudar a matar alguns?\"";
     next;
     goto L_Ask;
 
 L_Ask:
     menu
-        "Yes.", L_Yes,
-        "No.", L_Close;
+        "Sim.", L_Yes,
+        "Não.", L_Close;
 
 L_Yes:
     set @TEMP, rand(2);
@@ -40,13 +40,13 @@ L_Yes:
 
 L_Req0:
     mes "[Bernard]";
-    mes "\"Great!  I need a Roasted Maggot for my soup.\"";
+    mes "\"Ae!  Eu preciso de um Verme Torrado para minha sopa.\"";
     next;
     goto L_Set;
 
 L_Req1:
     mes "[Bernard]";
-    mes "\"Bring me a Roasted Maggot. I'll give you something if you do.\"";
+    mes "\"Me traga um Verme Torrado. Eu lhe darei alguma coisa caso o faça.\"";
     next;
     goto L_Set;
 
@@ -54,14 +54,14 @@ L_Set:
     set @state, 1;
     callsub S_Update_Var;
     mes "[Bernard]";
-    mes "\"Please bring it to me!\"";
+    mes "\"Por favor, traga para mim!\"";
     goto L_Close;
 
 L_Progress:
     if (countitem("RoastedMaggot") < 1) goto L_NotEnough;
     mes "[Bernard]";
-    mes "\"Oooh, perfect! It's perfect!";
-    mes "You brought me my Roasted Maggot!  Here, have some cake for your troubles.\"";
+    mes "\"Oooh, perfeito! É perfeito!";
+    mes "Você me trouxe um Verme Torrado!  Aqui, tome um bolo para você.\"";
     getinventorylist;
     if (@inventorylist_count - (countitem("RoastedMaggot") == 1) > 99 - (countitem("CherryCake") == 0) ) goto L_TooMany;
     delitem "RoastedMaggot", 1;
@@ -70,14 +70,14 @@ L_Progress:
     set @state, 2;
     callsub S_Update_Var;
     next;
-    mes "\"Now let's see...\"";
+    mes "\"Agora vamos ver...\"";
     goto L_Close;
 
 L_Progress2:
     if (countitem("MaggotSlime") < 3) goto L_NotEnough1;
     mes "[Bernard]";
-    mes "\"Nice!  They're perfect, just perfect!";
-    mes "You brought me the 3 Maggot Slimes!  Here, have some beer as reward.\"";
+    mes "\"Muito bom!  É perfeito, simplesmente perfeito!";
+    mes "Você me trouxe 3 Gosmas de Verme!  Aqui, tome uma cerveja para você.\"";
     getinventorylist;
     if ((@inventorylist_count - (countitem("MaggotSlime") == 3) > 99  - (countitem("Beer") == 0) )) goto L_TooMany;
     delitem "MaggotSlime", 3;
@@ -89,30 +89,30 @@ L_Progress2:
 
 L_NotEnough:
     mes "[Bernard]";
-    mes "\"Oh, please hurry and bring me a Roasted Maggot. I'm yearning for maggot soup!\"";
+    mes "\"Oh, por favor, volte e me traga um Verme Torrado. Eu preciso de uma sopa de vermes!\"";
     goto L_Close;
 
 L_NotEnough1:
     mes "[Bernard]";
-    mes "\"Please do hurry and bring me 3 Maggot Slimes, so I can finish my soup!\"";
+    mes "\"Oh, por favor, volte e me traga 3 Gosmas de Vermes, quero terminar minha sopa!\"";
     goto L_Close;
 
 L_Done1:
     mes "[Bernard]";
-    mes "\"Thank you so much!\"";
-    mes "\"But... something is missing to make the soup creamy.\"";
+    mes "\"Muito obrigado!\"";
+    mes "\"Mas... algo está faltando para minha sopa estar pronta.\"";
     next;
-    mes "\"I need 3 Maggot Slimes for that.\"";
-    mes "\"Bring them to me, and I'll give you something nice.\"";
+    mes "\"Eu preciso de 3 Gosmas de Vermes.\"";
+    mes "\"Me traga eles, eu lhe darei algo bom.\"";
     set @state, 3;
     callsub S_Update_Var;
     goto L_Close;
 
 L_Done2:
     mes "[Bernard]";
-    mes "\"I didn't mention it before, but I also put beer in my soup. I hope you like beer as much as I do, because, you see...\"";
+    mes "\"Eu não disse isso antes, mas eu sempre coloco cerveja em minha sopa. Eu espero que você goste de cerveja.\"";
     next;
-    mes "\"Beer is life!\"";
+    mes "\"Cerveja é vida!\"";
     goto L_Close;
 
 L_Close:
@@ -123,7 +123,7 @@ L_Close:
 L_TooMany:
     next;
     mes "[Bernard]";
-    mes "\"You don't have room for my reward. I'll wait until you do.\"";
+    mes "\"Você não tem espaço para a minha recompensa. Volte quando tiver espaço no inventário.\"";
     goto L_Close;
 
 S_Update_Var:
