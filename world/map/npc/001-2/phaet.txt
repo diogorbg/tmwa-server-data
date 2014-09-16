@@ -2,29 +2,29 @@
 
 001-2.gat,132,25,0|script|Phaet|125,0,0,
 {
-    mes "[Phaet the Royal Guard]";
-    mes "\"Hey, you seem tough enough! Would you like to prove your skills? I'll let you in the arena if you give me 50 gp. You can fight against other players there.\"";
+    mes "[Phaet o Guarda Real]";
+    mes "\"Ei, você parece resistente o suficiente! Gostaria de provar suas habilidades? Eu vou deixar você na arena se você me der 50 gp. Você pode lutar contra outros jogadores lá.\"";
     next;
     menu
-        "Yes", L_Sure,
-        "No", L_Next;
+        "Sim", L_Sure,
+        "Não", L_Next;
 
 L_Next:
-    mes "[Phaet the Royal Guard]";
-    mes "\"Ha ha, coward.\"";
+    mes "[Phaet o Guarda Real]";
+    mes "\"Ha ha, covarde.\"";
     close;
 
 L_Sure:
     if (Zeny < 50) goto L_NoMoney;
     set Zeny, Zeny - 50;
 
-    mes "[Phaet the Royal Guard]";
-    mes "\"Get ready!\"";
+    mes "[Phaet o Guarda Real]";
+    mes "\"Prepare-se!\"";
     next;
     warp "001-3.gat", 0, 0;
     close;
 
 L_NoMoney:
-    mes "\"Wait a second, you don't have enough money.\"";
+    mes "\"Espere um segundo, você não tem dinheiro suficiente.\"";
     close;
 }

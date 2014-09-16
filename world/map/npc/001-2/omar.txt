@@ -35,98 +35,98 @@ function|script|KadiyaSubquestConsts|,
     if (@Q_status > @Q_STATUS_DIDNT_DRINK) goto L_make_food;
 
     mes "[Omar]";
-    mes "\"Welcome to my humble abode.\"";
+    mes "\"Bem vindo a minha humilde casa.\"";
     next;
     menu
-        "Well met!  May I ask who you are?", L_omar,
-        "What's wrong with your daughter?", L_kadiya_sick,
-        "Thank you!", L_Close;
+        "Prazer em conhecer! Posso saber quem você é?", L_omar,
+        "Qual o problema com a sua filha?", L_kadiya_sick,
+        "Obrigado!", L_Close;
 
 L_omar:
     mes "[Omar]";
-    mes "\"My name is Omar;  I am a trader of oils and spices.\"";
+    mes "\"Meu nome é Omar. E eu sou um negociante de óleos e especiarias.\"";
     goto L_Close;
 
 L_kadiya_sick:
     mes "[Omar]";
-    mes "\"Kadiya has caught Ponderpox, I fear.\"";
-    mes "He sighs.";
-    mes "\"She's has been feverish for many days now. I wish there were something I could do.\"";
+    mes "\"Kadiya pegou Ponderpox, eu temo.\"";
+    mes "ele suspira.";
+    mes "\"Ela tem ficado febril por muitos dias. Eu gostaria que houvesse algo que eu pudesse fazer.\"";
     next;
     menu
-        "Have you asked Elanore the healer?", L_sick_elanore,
-        "How about the Hurnscald hospital?", L_sick_hospital,
-        "Can I help?", L_sick_self,
-        "I'm sorry to hear that.", L_Next;
+        "Você já perguntou a Elanore a curadeira?", L_sick_elanore,
+        "Que tal ir ao hospital de Hurnscald?", L_sick_hospital,
+        "Posso ajudar?", L_sick_self,
+        "Eu sinto muito em ouvir isso.", L_Next;
 
 L_Next:
     mes "[Omar]";
-    mes "\"Well, she is a strong girl. I am sure that she will get over it eventually.\"";
-    mes "He smiles, but you see doubt in his eyes.";
+    mes "\"Bem, ela é uma garota forte. Tenho certeza que ela vai superar isso com um tempo.\"";
+    mes "Ele sorri, mas você vê dúvida em seus olhos.";
     goto L_Close;
 
 L_sick_elanore:
     mes "[Omar]";
     mes "\"Elanore?\"";
-    mes "He frowns.";
-    mes "\"She knows nothing. I see no point in talking to her.\"";
+    mes "Ele franze a testa.";
+    mes "\"Ela não sabe de nada. Não vejo razão em falar com ela.\"";
     goto L_Close;
 
 L_sick_hospital:
     mes "[Omar]";
-    mes "\"Hurnscald is too far away. I don't think that it would be good for her to go on such a long trip.\"";
+    mes "\"Hurnscald é muito longe. Eu não acho que seria bom para ela para ir em uma viagem tão longa.\"";
     goto L_Close;
 
 L_sick_self:
     mes "[Omar]";
-    mes "\"You are very kind, but I don't think there is anything you can do.\"";
+    mes "\"Você é muito gentil, mas eu não acho que há qualquer coisa que você possa fazer.\"";
     goto L_Close;
 
 L_didnt_drink:
     mes "[Omar]";
-    mes "\"So she has Mopox, not Ponderpox, you say?  Hmm. That is much harder to cure, I think.\"";
-    mes "\"I am grateful for the effort you put into brewing a potion for her. But it does smell vile...\"";
+    mes "\"Então ela tem Mopox, não Ponderpox, você diz?  Hmm. Isso é muito mais difícil de curar, eu acho.\"";
+    mes "\"Sou grato pela esforço que você colocou na fabricação da poção de cerveja para ela. Mas cheira mau...\"";
     next;
     mes "[Omar]";
-    mes "\"I promised my dear wife that I would never make Kadiya eat or drink anything she doesn't like. So I won't force her to drink this.\"";
+    mes "\"Eu prometi a minha querida esposa que eu nunca faria Kadiya comer ou beber qualquer coisa que ela não gosta. Então eu não vou forçá-la a beber isso.\"";
     next;
     mes "[Omar]";
     set @Q_status, (@Q_STATUS_WANTS_CHOCOCAKE + rand(2));
     callsub S_update_var;
     if (@Q_status == @Q_STATUS_WANTS_ORANGECUPCAKE)
-        mes "\"If only we could make it smell and taste like orange cupcakes... she really loves those cupcakes.\"";
+        mes "\"Se pudéssemos fazê-lo sentir o cheiro e gosto de bolinhos de laranja... ela realmente ama aqueles cupcakes.\"";
     if (@Q_status == @Q_STATUS_WANTS_CHOCOCAKE)
-        mes "\"If only this were a chocolate cake and not a potion... she really loves chocolate cakes.\"";
+        mes "\"Se apenas isso fosse um bolo de chocolate e não uma poção... ela realmente ama bolos de chocolate.\"";
     goto L_Close;
 
 L_make_food:
     mes "[Omar]";
-    mes "\"I should stay here to watch over her. I wish I could think of a way to convince her to drink the potion...\"";
+    mes "\"Eu deveria ficar aqui para vigiá-la. Talvez eu possa pensar em uma maneira de convencê-la a beber a poção...\"";
     if (@Q_status == @Q_STATUS_WANTS_ORANGECUPCAKE)
-        mes "\"Alas, it is not an orange cupcake.\"";
+        mes "\"Infelizmente, não é um cupcake de laranja.\"";
     if (@Q_status == @Q_STATUS_WANTS_CHOCOCAKE)
-        mes "\"If only it were to smell and taste like her favourite chocolate cake...\"";
+        mes "\"Se tivesse o gosto de bolo de chocolate, que é seu favorito ...\"";
     goto L_Close;
 
 L_cured:
     if (@Q_status == @Q_STATUS_COMPLETED) goto L_cured_choice;
     mes "[Omar]";
-    mes "\"She is sleeping now, but she seems to be much better. I am sure that she will be up and running around again soon.\"";
+    mes "\"Ela está dormindo agora, mas ela parece estar muito melhor. Estou certo que ela vai ficar bem e voltar a correr em breve.\"";
     goto L_Close;
 
 L_cured_choice:
     mes "[Omar]";
-    mes "\"I am very grateful for your help. I really was sure that it was Ponderpox, not Mopox, that she had.\"";
+    mes "\"Sou muito grato por sua ajuda. Eu realmente tinha certeza de que era Ponderpox, não Mopox, que ela tinha.\"";
     next;
     menu
-        "Oh, it was nothing.", L_cured_nothing,
-        "I didn't do it alone; Elanore helped.", L_cured_elanore,
-        "That will be 5000 GP.", L_Next1;
+        "Oh, não foi nada.", L_cured_nothing,
+        "Eu não fiz isso sozinho; Elanore me ajudou.", L_cured_elanore,
+        "Isso vai custar 5000 GP.", L_Next1;
 
 L_Next1:
     mes "[Omar]";
-    mes "\"Ah, certainly.\"";
-    mes "He hands you a small bag of money.";
+    mes "\"Ah, com certeza.\"";
+    mes "Ele entrega-lhe um pequeno saco de dinheiro.";
     next;
     set @Q_status, @Q_STATUS_COMPLETED_NOELANORE;
     callsub S_update_var;
@@ -135,9 +135,9 @@ L_Next1:
 
 L_cured_nothing:
     mes "[Omar]";
-    mes "\"No, this wasn't nothing. She is everything to me. Here, you deserve a reward.\"";
-    mes "He hands you a bag of money containing 10,000 GP and two pearls.";
-    mes "\"And feel free to drop by again whenever you would like!\"";
+    mes "\"Não, isso não é nada. Ela é tudo para mim. Aqui, você merece uma recompensa.\"";
+    mes "Ele entrega-lhe um saco de dinheiro contendo 10.000 GP e duas pérolas.";
+    mes "\"Muito Obrigado!\"";
     set @Q_status, @Q_STATUS_COMPLETED_NOELANORE;
     callsub S_update_var;
     getitem "Pearl", 2;
@@ -146,14 +146,14 @@ L_cured_nothing:
 
 L_cured_elanore:
     mes "[Omar]";
-    mes "Omar frowns.";
-    mes "\"That witch?  You worked with her without telling me?\"";
-    mes "He looks over to his daughter, concern suddenly in his eyes.";
-    mes "\"She is looking better, though...\"";
+    mes "Omar com olhar severo.";
+    mes "\"Essa bruxa? Você trabalhou com ela sem me dizer?\"";
+    mes "Ele olha para a sua filha, de repente com olhar de preocupação.";
+    mes "\"Embora, ela estar melhor...\"";
     next;
     mes "[Omar]";
-    mes "Omar shakes his head.";
-    mes "\"I will have to think about this. Please leave me alone.\"";
+    mes "Omar balança a cabeça.";
+    mes "\"Vou ter que pensar sobre isso. Por favor, saia daqui!\"";
     next;
     set @Q_status, @Q_STATUS_COMPLETED_ELANORE;
     callsub S_update_var;
@@ -190,11 +190,11 @@ S_update_var:
     set @Q_status, @Q_kadiya_status;
     if (@Q_status >= @Q_STATUS_COMPLETED) goto L_cured;
 
-    mes "You see a young girl lying in bed. At first she doesn't seem to notice you approaching.";
-    mes "Finally, she turns her head towards you. Judging from the sweat on her forehead and look in her eyes, she is suffering from some kind of fever.";
+    mes "Você vê uma garota deitada na cama. No início, ela não parece perceber que você se aproxima.";
+    mes "Por fim, ela vira a cabeça para você. Ao perceber pelo suor na testa e olhar em seus olhos, ela está sofrendo de algum tipo de febre.";
     next;
     mes "[Kadiya]";
-    mes "\"Hello,\" she says in a tiny voice.";
+    mes "\"Olá,\" ela diz com uma voz pequena.";
     next;
     set @M_NAME, 1;
     set @M_CANDY, 2;
@@ -202,14 +202,14 @@ S_update_var:
     set @M_CHOCOCAKE, 4;
     set @M_CUPCAKE, 5;
 
-    setarray @choice$, "Hello!  What's your name?", "Would you like some candy?", "", "", "", "", "", "";
+    setarray @choice$, "Olá! Qual o seu nome?", "Gostaria de um pouco de doces?", "", "", "", "", "", "";
     setarray @choice_idx, @M_NAME, @M_CANDY, 0, 0, 0, 0, 0, 0;
     set @choices_nr, 2;
 
     if (countitem("MopoxCurePotion") == 0) goto L_M_no_cure;
 
     set @choice_idx[@choices_nr], @M_POTION;
-    set @choice$[@choices_nr], "This potion will cure your illness!";
+    set @choice$[@choices_nr], "Esta poção irá curar a sua doença!";
     set @choices_nr, @choices_nr + 1;
     goto L_M_no_cure;
 
@@ -217,7 +217,7 @@ L_M_no_cure:
     if ((countitem("LacedChocolateCake") == 0) || (@Q_status != @Q_STATUS_WANTS_CHOCOCAKE))
         goto L_M_no_chococake;
     set @choice_idx[@choices_nr], @M_CHOCOCAKE;
-    set @choice$[@choices_nr], "Would you like special chocolate cake?";
+    set @choice$[@choices_nr], "Gostaria de um bolo especial de chocolate?";
     set @choices_nr, @choices_nr + 1;
     goto L_M_no_chococake;
 
@@ -225,13 +225,13 @@ L_M_no_chococake:
     if ((countitem("LacedOrangeCupcake") == 0) || (@Q_status != @Q_STATUS_WANTS_ORANGECUPCAKE))
         goto L_M_no_cupcake;
     set @choice_idx[@choices_nr], @M_CUPCAKE;
-    set @choice$[@choices_nr], "Would you like special orange cupcake?";
+    set @choice$[@choices_nr], "Gostaria de um cupcake especial de laranja?";
     set @choices_nr, @choices_nr + 1;
     goto L_M_no_cupcake;
 
 L_M_no_cupcake:
     set @choice_idx[@choices_nr], 0;
-    set @choice$[@choices_nr], "Goodbye.";
+    set @choice$[@choices_nr], "Tchau.";
     set @choices_nr, @choices_nr + 1;
 
     menu
@@ -254,14 +254,14 @@ L_MenuItems:
 
 L_name:
     mes "[Kadiya]";
-    mes "She smiles a faint smile.";
-    mes "\"My name is Kadiya.\"";
+    mes "Ela sorri um sorriso fraco.";
+    mes "\"Meu nome é Kadiya.\"";
     goto L_Close;
 
 L_no_candy:
     mes "[Kadiya]";
-    mes "She hesitates for a moment.";
-    mes "\"No, thank you. I don't think I should.\"";
+    mes "Ela hesita por um momento.";
+    mes "\"Não, obrigado. Eu acho que não deveria.\"";
     goto L_Close;
 
 L_potion:
@@ -269,12 +269,12 @@ L_potion:
     if (@Q_status < @Q_STATUS_DIDNT_DRINK) set @Q_status, @Q_STATUS_DIDNT_DRINK;
     callsub S_update_var;
 
-    mes "Kadiya grimaces and pushes the bottle away.";
-    mes "\"That smells terrible!\"";
+    mes "Kadiya faz uma careta e empurra a garrafa.";
+    mes "\"Isso cheira muito mau!\"";
     next;
     mes "[Kadiya]";
-    mes "She pulls the sheets over her head.";
-    mes "\"I won't drink that!\"";
+    mes "Ela puxa os lençóis sobre sua cabeça.";
+    mes "\"Eu não vou beber isso!\"";
     goto L_Close;
 
 L_chococake:
@@ -290,28 +290,28 @@ L_do_cure:
     callsub S_update_var;
 
     mes "[Kadiya]";
-    mes "Kadiya's eyes widen.";
-    mes "\"Oh!  Daddy, is it okay if I eat this?\"";
-    mes "Omar nods and smiles. \"You should eat a bit to regain your strength, sweetheart.\"";
+    mes "Os olhos de Kadiya se abrem.";
+    mes "\"Oh! Papai, está tudo bem se eu comer isso?\"";
+    mes "Omar sorridente acenou com a cabeça. \"Você deve comer um pouco para recuperar a sua força, querida.\"";
     next;
     mes "[Kadiya]";
-    mes "Kadiya devours your gift in just a handful of bites.";
+    mes "Kadiya devora seu presente em poucas mordidas.";
     next;
     mes "[Kadiya]";
-    mes "She smiles. \"Thank you!  I feel better already!\".";
+    mes "ela sorri. \"Obrigado! Já me sinto melhor!\".";
     next;
     mes "[Kadiya]";
-    mes "She looks much healthier, too. Omar walks over and touches her forehead.";
-    mes "\"Now that is funny – your fever has gone down quite a bit!\"";
-    mes "He smiles at you. \"Thank you for your help!\"";
+    mes "Ela parece muito mais saudável, Omar caminha e toca a testa dela.";
+    mes "\"Agora que é engraçado – sua febre baixou um pouco!\"";
+    mes "Ele sorri para você. \"Obrigado pela ajuda!\"";
     next;
-    mes "[Kadiya]";
-    mes "\"You should get some sleep now, sweetheart. I'm sure that you will be better soon.\"";
+    mes "[Omar]";
+    mes "\"Você deveria dormir um pouco agora, querida. Tenho certeza que você ficará melhor em breve.\"";
     goto L_Close;
 
 L_cured:
     mes "[Kadiya]";
-    mes "Kadiya seems to be sleeping calmly. She looks much less sweaty than earlier; unless you are very much mistaken, her fever has disappeared.";
+    mes "Kadiya parece estar dormindo calmamente. Ela parece muito menos suada do que antes; a menos que você esteja enganado, a febre desapareceu.";
     goto L_Close;
 
 L_Close:
