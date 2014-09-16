@@ -2,19 +2,19 @@
 
 001-3.gat,77,37,0|script|Phaet#arena|125,
 {
-    mes "[Phaet the Royal Guard]";
-    mes "\"Do you want to go back?\"";
+    mes "[Phaet da Guarda Real";
+    mes "\"Deseja voltar?\"";
     next;
     menu
-        "Yes", L_Sure,
-        "No", L_Next;
+        "Sim", L_Sure,
+        "Não", L_Next;
 
 L_Next:
-    mes "Have fun.";
+    mes "divirta-se.";
     close;
 
 L_Sure:
-    mes "[Phaet the Royal Guard]";
+    mes "[Phaet da Guarda Real";
     mes "\"Ok.\"";
     next;
     warp "001-2.gat", 25, 23;
@@ -23,8 +23,8 @@ L_Sure:
 
 001-3.gat,69,37,0|script|Aradin|126,
 {
-    mes "[Aradin the Royal Guard]";
-    mes "\"Don't touch me...";
-    mes "You wouldn't enjoy the consequences.\"";
+    mes "[Aradin da Guarda Real";
+    mes "\"Não me toque...";
+    mes "Você não iria gostar das consequências.\"";
     close;
 }
