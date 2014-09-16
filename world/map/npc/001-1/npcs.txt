@@ -5,11 +5,11 @@
     set @npcname$, "Yalina";
 
     mes "[" + @npcname$ + "]";
-    mes "\"Ian knows a lot!  I had so many questions he helped me with!\"";
+    mes "\"Ian sabe muito! Eu tinha tantas perguntas e ele me ajudou com elas!\"";
     next;
-    mes "\"He rewards those that know what they are doing. When Elanore stops healing you, check in with Ian.\"";
+    mes "\"Ele recompensa aqueles que sabem o que estão fazendo. Quando Elanore parar de curar você, fale com Ian.\"";
     next;
-    mes "\"Oh, just one more thing, Gladys may gossip a lot, but when I'm confused, she tends to know something that might help me out.\"";
+    mes "\"Ah, só mais uma coisa, Glady pode fofocar muito, mas quando eu estou confusa, ela pode saber algo que poderia me ajudar.\"";
     set @npcname$, "";
     close;
 }
@@ -19,9 +19,9 @@
     set @npcname$, "Cyndala";
 
     mes "[" + @npcname$ + "]";
-    mes "\"I used to visit the beach, but then the green slimes went crazy. I heard they ate a bunch of pirates that robbed some of Tulimshar's gold ships.\"";
+    mes "\"Eu costumava visitar a praia, mas, em seguida, os limos verdes enlouqueceram. Ouvi dizer que eles comeram um bando de piratas que roubaram alguns dos navios de ouro de Tulimshar.\"";
     next;
-    mes "\"Good riddance!\"";
+    mes "\"Boa viagem!\"";
     set @npcname$, "";
     close;
 }

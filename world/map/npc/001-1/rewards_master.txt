@@ -8,8 +8,8 @@
 
     setarray @Items$, "AppleCake", "Arrow", "Beer", "Boots", "BugLeg", "CactusDrink", "CactusPotion", "Cake", "Candy", "CasinoCoins", "CherryCake", "ChickenLeg", "ChocolateBar", "ChocolateCake", "CottonBoots", "CottonCloth", "CottonShirt", "CottonShorts", "FancyHat", "GreenApple", "HardSpike", "IronOre", "Lifestone", "LightBlueDye", "MaggotSlime", "Milk", "Orange", "OrangeCake", "OrangeCupcake", "PinkPetal", "PileOfAsh", "PinkAntenna", "PoltergeistPowder", "RawLog", "RedApple", "RedDye", "ScorpionStinger", "SerfHat", "SmallHealingPotion", "SmallMushroom", "SnakeSkin", "SpectrePowder", "Steak", "TinyHealingPotion", "WhiteCake", "WhiteFur", "WispPowder", "YellowDye", "Coal";
 
-    mes "[Ishi the Rewards Master]";
-    mes "\"Welcome! I see you have " + Mobpt + " Monster Points. Would you like to exchange some of those for items?\"";
+    mes "[Ishi a Mestra de Recompensas]";
+    mes "\"Bem vindo! Vejo que você tem " + Mobpt + " Pontos de Monstro. Você gostaria de trocar seus pontos por alguns itens?\"";
     next;
 
     set @i, 0;
@@ -48,17 +48,17 @@ L_Item_Loop:
     goto L_Item_Loop;
 
 L_Item_Done:
-    if (@rec < @req) mes "It looks like your Monster Points were over estimated.";
+    if (@rec < @req) mes "Parece que seus Pontos de Montro eram mais estimados.";
     goto L_Close;
 
 L_Register:
-    mes "[Ishi the Rewards Master]";
-    mes "\"Hey, it seems like you didn't register as a quest participant yet! You can sign up with Aidan.\"";
+    mes "[Ishi a Mestra de Recompensas]";
+    mes "\"Ei, parece que você não registrou-se como um caçador participante ainda! Você pode inscrever-se com o Aindan.\"";
     goto L_Close;
 
 L_NotEnough:
-    mes "[Ishi the Rewards Master]";
-    mes "\"You don't have enough Monster Points for a reward. You'll need to kill some more monsters first.\"";
+    mes "[Ishi a Mestra de Recompensas]";
+    mes "\"Você não tem Pontos de Monstro o suficiente para uma recompensa. Você terá que matar mais alguns monstros antes.\"";
     goto L_Close;
 
 L_Give_all:
@@ -78,11 +78,11 @@ L_Give_all_loop:
 
 L_Give_all_next:
     next;
-    mes "[Ishi the Rewards Master]";
-    mes "\"You have received a lot of items. You still have " + Mobpt + " monster points. Shall we continue?\"";
+    mes "[Ishi a Mestra de Recompensas]";
+    mes "\"Você recebeu muitos itens. Você tem " + Mobpt + " Pontos de Monstros. Quer continuar?\"";
     menu
-        "Yes", L_Give_all,
-        "No", L_Close;
+        "Sim", L_Give_all,
+        "Não", L_Close;
 
 L_Close:
     set @gotocounter, 0;
@@ -117,12 +117,12 @@ L_Menu_Loop:
 L_Menu_Check:
     // if we are able to give 10, we can enable the option to give all we can have
     if (@i != 10) goto L_Menu_Done;
-        set @Menu$[@i], "Please give me as many as I deserve!";
+        set @Menu$[@i], "Por favor me dê tudo oque mereço!";
         set @i, @i + 1;
     goto L_Menu_Done;
 
 L_Menu_Done:
-    set @Menu$[@i], "No thanks";
+    set @Menu$[@i], "Não, obrigado";
     return;
 
 S_give_item:
@@ -136,16 +136,16 @@ S_give_item:
 
     getitem @item$, 1;
 
-    mes "You received one " + getitemname(@item$) + "!";
+    mes "Você recebeu um " + getitemname(@item$) + "!";
     return;
 
 S_give_noinv:
-    mes "Your inventory is full!";
+    mes "Seu inventário está cheio!";
     set @itemgiveerror, 1;
     return;
 
 S_give_nomobpts:
-    mes "It looks like your Monster Points were over estimated.";
+    mes "Parece que seus Pontos de Montro eram mais estimados.";
     set @itemgiveerror, 1;
     return;
 }

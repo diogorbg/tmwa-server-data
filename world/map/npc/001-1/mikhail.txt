@@ -14,40 +14,40 @@
 
 L_Convince_Mikhail_First:
     mes "[Mikhail]";
-    mes "\"Hello...\"";
+    mes "\"Olá...\"";
     mes "";
-    mes "It seems that the boy would like to say more, but does not dare to open up to you. Maybe you should help someone else first, so that he sees your intentions are good.";
+    mes "Parece que o rapaz gostaria de dizer mais, mas não se atreve a se abrir para você. Talvez você deve ajudar alguém em primeiro lugar, de modo que ele vê que suas intenções são boas.";
     goto L_Close;
 
 L_Start:
     mes "[Mikhail]";
-    mes "\"My grandma sent me to get five Maggot Slimes from the maggots in the desert, but they scare me so bad!\"";
+    mes "\"Minha avó me mandou para obter cinco Gosmas de Verme dos vermes no deserto, mas eles me assustam!\"";
     next;
-    mes "\"You look like a nice person. Would you go get them for me?\"";
+    mes "\"Você parece uma boa pessoa. Você poderia pega-los para mim?\"";
     menu
-        "Of course, I'll go get them for you.", L_accept,
-        "I've got other things to do right now.", L_Close;
+        "Claro, eu vou levá-los para você.", L_accept,
+        "Tenho outras coisas para fazer agora.", L_Close;
 
 L_accept:
     mes "[Mikhail]";
-    mes "\"Thank you so much!  I'll wait for you here.\"";
+    mes "\"Muito obrigado! Eu vou esperar por você aqui.\"";
     set @state, 5;
     callsub S_Update_Var;
     close;
 
 L_Progress:
     mes "[Mikhail]";
-    mes "\"Did you bring me the five Maggot Slimes I need?\"";
+    mes "\"Você me trouxe as cinco Gosmas de Verme que preciso?\"";
     next;
     menu
-        "Yes, here they are, kiddo!", L_try,
-        "Not yet, but I'll be back soon.", L_Close;
+        "Sim, eles estão aqui, garoto!", L_try,
+        "Ainda não, mas eu vou trazer em breve.", L_Close;
 
 L_try:
     if (countitem("MaggotSlime") >= 5)
         goto L_get;
     mes "[Mikhail]";
-    mes "\"It doesn't look like you have them all...\"";
+    mes "\"Não me parece que você tem todos...\"";
     goto L_Close;
 
 L_get:
@@ -56,12 +56,12 @@ L_get:
     set @state, 6;
     callsub S_Update_Var;
     mes "[Mikhail]";
-    mes "\"Ooh!  Thank you so much!  I can get back to my grandma now!\"";
+    mes "\"Ooh! Muito obrigado! Eu posso leva-los para a minha avó agora!\"";
     goto L_Close;
 
 L_Done:
     mes "[Mikhail]";
-    mes "\"Thanks again for helping me get those Maggot Slimes!\"";
+    mes "\"Mais uma vez obrigado por me ajudar a obter essas Gosmas de Verme!\"";
     goto L_Close;
 
 L_Close:
