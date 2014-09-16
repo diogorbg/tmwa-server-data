@@ -11,7 +11,7 @@
     if (@state == 1) goto L_Progress;
 
     mes "[Sarah]";
-    mes "\"Boy, am I hungry or what!\"";
+    mes "\"Cara, estou com fome!\"";
     next;
 
     set @TEMP, rand(2);
@@ -19,24 +19,24 @@
     goto L_Opening0;
 
 L_Opening0:
-    mes "\"Cherry Cake is the best!\"";
+    mes "\"Bolo de Cereja é o melhor!\"";
     next;
     goto L_Ask;
 
 L_Opening1:
-    mes "\"Mmm, Cherry Cake... I love it!\"";
+    mes "\"Mmm, Bolo de Cereja... Eu amo isso!\"";
     next;
     goto L_Ask;
 
 L_Ask:
-    mes "\"Can you bring me a piece of Cherry Cake?  Pretty please?\"";
+    mes "\"Você pode me dar uma fatia de Bolo de Cereja?  Por favor?\"";
     menu
-        "Yes.", L_Req0,
-        "No.", L_Close;
+        "Sim.", L_Req0,
+        "Não.", L_Close;
 
 L_Req0:
     mes "[Sarah]";
-    mes "\"Yippee!  Bring me a piece of Cherry Cake, and I'll give you a nice hat!\"";
+    mes "\"Yippee!  Me dê uma fatia de Bolo de Cereja, e eu lhe darei um bom chapéu!\"";
     next;
     set @state, 1;
     callsub S_Update_Var;
@@ -50,7 +50,7 @@ L_Progress:
     mes "[Sarah]";
     mes "\"Whee!\"";
     next;
-    mes "You brought me Cherry Cake!  Here is your new hat, as promised.\"";
+    mes "Você me trouxe o Bolo de Cereja!  Aqui está seu novo chepéu, como prometido.\"";
     emotion EMOTE_TONGUE;
     getinventorylist;
     if ((@inventorylist_count - (countitem("CherryCake") == 1)) > 99) goto L_TooMany;
@@ -62,12 +62,12 @@ L_Progress:
 
 L_NotEnough:
     mes "[Sarah]";
-    mes "\"Oh, I'm starving!  Please bring me Cherry Cake!\"";
+    mes "\"Oh, Estou com fome!  Por favor me dê um Bolo de Cereja!\"";
     goto L_Close;
 
 L_Done:
     mes "[Sarah]";
-    mes "\"It was so tasty, I can't eat anything more... Thank you!\"";
+    mes "\"Isso é muito saboro, eu não consigo mais parar de comer... Obrigado!\"";
     emotion EMOTE_TONGUE;
     goto L_Close;
 
@@ -79,7 +79,7 @@ L_Close:
 L_TooMany:
     next;
     mes "[Sarah]";
-    mes "\"You don't have room for my reward. I'll wait until you do.\"";
+    mes "\"Você não tem espaço para minha recompensa. Volte quando tiver.\"";
     goto L_Close;
 
 S_Update_Var:

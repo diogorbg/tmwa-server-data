@@ -11,7 +11,7 @@
     if (@state == 1) goto L_Progress;
 
     mes "[Sandra]";
-    mes "\"Hunting monsters for potion ingredients can sometimes be a difficult task.\"";
+    mes "\"Caçar monstros para conseguir ingredientes de poções às vezes pode ser uma tarefa difícil.\"";
     next;
 
     set @TEMP, rand(4);
@@ -21,29 +21,29 @@
     goto L_Opening0;
 
 L_Opening0:
-    mes "\"In the outskirts of Tulimshar, there are some scorpions... I need  help!  Will you help?\"";
+    mes "\"Nos arredores de Tulimshar, há alguns escorpiões ... Preciso de ajuda! Você vai me ajudar?\"";
     next;
     goto L_Ask;
 
 L_Opening1:
-    mes "\"When you venture to the outskirts of Tulimshar, you can spot scorpions. Will you help me kill some?\"";
+    mes "\"Quando você se arrisca nos lugares estranhos da Tulimshar, você pode ver escorpiões. Vai me ajudar a matar alguns?\"";
     next;
     goto L_Ask;
 
 L_Opening2:
-    mes "\"The Scorpion Stinger carries many properties used in potions. Would you get some for me?\"";
+    mes "\"O Ferrão de Escorpião carrega muitas propriedades utilizadas em poções. Pode obter alguns para mim?\"";
     next;
     goto L_Ask;
 
 L_Opening3:
-    mes "\"You look sturdy enough, will you help me get something?\"";
+    mes "\"Você parece robusto o suficiente, vai me ajudar a conseguir algo?\"";
     next;
     goto L_Ask;
 
 L_Ask:
     menu
-        "Yes.", L_Yes,
-        "No.", L_Close;
+        "Sim.", L_Yes,
+        "Não.", L_Close;
 
 L_Yes:
     set @TEMP, rand(3);
@@ -53,34 +53,34 @@ L_Yes:
 
 L_Req0:
     mes "[Sandra]";
-    mes "\"I need 5 Scorpion Stingers.\"";
+    mes "\"Eu preciso de 5 Ferrões de Escorpião.\"";
     next;
     goto L_Set;
 
 L_Req1:
     mes "[Sandra]";
-    mes "\"I heard a while ago that stingers from scorpions can be used for medical purposes. I need you to help me get 5 Scorpion Stingers.\"";
+    mes "\"Ouvi há pouco que ferrões de escorpiões podem ser usado para fins médicos. Eu preciso de você para me ajudar a obter 5 Ferrões de Escorpião.\"";
     next;
     goto L_Set;
 
 L_Req2:
     mes "[Sandra]";
-    mes "\"Bring me 5 Scorpion Stingers. I'll give you something if you do!\"";
+    mes "\"Traga-me 5 Ferrões de Escorpião. Vou dar-lhe alguma coisa, se você fizer isso!\"";
     next;
     goto L_Set;
 
 L_Set:
     set @state, 1;
     callsub S_Update_Var;
-    mes "\"Please get them for me!\"";
+    mes "\"Por favor, traga-os para mim!\"";
     goto L_Close;
 
 L_Progress:
     if (countitem("ScorpionStinger") < 5)
         goto L_NotEnough;
     mes "[Sandra]";
-    mes "\"Excellent! You brought me 5 Scorpion Stingers!";
-    mes "Here's something for you.\"";
+    mes "\"Exelente! Ve me trouxe os 5 Ferrões de Escorpião!";
+    mes "Tome algo para você.\"";
     getinventorylist;
     if (@inventorylist_count + (countitem("ScorpionStinger") == 5) - (countitem("Arrow") == 0) > 99)
         goto L_TooMany;
@@ -93,12 +93,12 @@ L_Progress:
 
 L_NotEnough:
     mes "[Sandra]";
-    mes "\"Please hurry and bring me 5 Scorpion Stingers.\"";
+    mes "\"Por favor volte e me traga os 5 Ferrões de Escorpião.\"";
     goto L_Close;
 
 L_Done:
     mes "[Sandra]";
-    mes "\"Thank you for all your help!\"";
+    mes "\"Obrigado pela ajuda!\"";
     goto L_Close;
 
 L_Close:
@@ -109,7 +109,7 @@ L_Close:
 L_TooMany:
     next;
     mes "[Sandra]";
-    mes "\"You don't have room for my reward. I'll wait until you do.\"";
+    mes "\"Você não tem espaço para a minha recompensa. Eu vou esperar até que você tenha.\"";
     goto L_Close;
 
 S_Update_Var:
