@@ -9,7 +9,7 @@
 
     if (@state >= 25) goto L_Underground_Palace_Barrier_Open;
 
-    message strcharinfo(0), "Some force seems to block your entrance.";
+    message strcharinfo(0), "Alguma força parece bloquear a sua entrada.";
     goto L_End;
 
 L_Underground_Palace_Barrier_Open:
