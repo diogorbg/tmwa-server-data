@@ -1,4 +1,4 @@
-//
+﻿//
 // traduzido por Diogo_RBG
 
 002-1.gat,92,100,0|script|Samuel|132,
@@ -12,6 +12,6 @@
 002-1.gat,102,100,0|script|Elijah|128,
 {
     mes "[Elijah o Nômade]";
-    mes "\"É legal encontrar um refúgio como este...\"";
+    mes "\"Que bom encontrar um refúgio como este...\"";
     close;
 }
