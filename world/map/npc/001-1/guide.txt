@@ -14,163 +14,163 @@
 
 L_DoneGrad:
     mes "[Ian the Guide]";
-    mes "\"Would you like to know about something?\"";
+    mes "\"Gostaria de saber sobre algo?\"";
     next;
     goto L_Menu_A;
 
 L_Menu_A:
     menu
-        "Fighting", L_Fight,
-        "Items", L_Items,
-        "Monsters", L_Monster,
-        "Stylist", L_Style,
-        "Quests", L_Quests,
+        "Combates", L_Fight,
+        "itens", L_Items,
+        "monstros", L_Monster,
+        "estilista", L_Style,
+        "missões", L_Quests,
         "NPCs", L_NPC,
-        "Commands", L_Comm,
-        "Attributes", L_Stats,
-        "Magic", L_Magic,
-        "Quick Keys", L_Key,
-        "Laws", L_Laws,
-        "I know everything!", L_Know;
+        "comandos", L_Comm,
+        "atributos", L_Stats,
+        "magia", L_Magic,
+        "teclas de atalho", L_Key,
+        "leis", L_Laws,
+        "Eu sei de tudo!", L_Know;
 
 L_Fight:
     mes "[Ian the Guide]";
-    mes "\"People live in this world by living off of monsters.";
-    mes "You can fight monsters and even players by hitting the [CTRL] key, or left mouse click.\"";
+    mes "\"As pessoas vivem neste mundo, vivendo fora de monstros.";
+    mes "Você pode lutar contra monstros e até mesmo os jogadores pressionando a tecla [CTRL], ou clique esquerdo do mouse.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"If you get tired of pressing the key too much, you can also type [SHIFT]+[CTRL].";
-    mes "This will make your character attack continuously for the time you are inactive.\"";
+    mes "\"Se você ficar cansado de pressionar muito a tecla, você também pode pressionar [SHIFT] + [CTRL].";
+    mes "Isso fará com que seu personagem ataque continuamente durante o tempo que você está inativo.\"";
     next;
     goto L_Menu_A;
 
 L_Items:
     mes "[Ian the Guide]";
-    mes "\"There are three types of items.";
-    mes "They can be Consumables, Equipment or Miscellaneous\"";
+    mes "\"Existem três tipos de itens.";
+    mes "Eles podem ser consumíveis, equipamentos e Diversos\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Consumable items such as Potions, can be used only once.";
-    mes "After use, they will disappear from your inventory.\"";
+    mes "\"Consumíveis como poções, pode ser usado apenas uma vez.";
+    mes "Após o uso, eles vão desaparecer do seu inventário.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Equipment items like Armors, Weapons, Accessories";
-    mes "can be equipped for fashionable purposes or to raise your status.\"";
+    mes "\"Itens de equipamentos, como armaduras, armas, acessórios";
+    mes "pode ser equipado para fins de moda ou para elevar o seu status.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Miscellaneous items such as maggot slime, are used";
-    mes "in creating other items, or just to trade and sell.\"";
+    mes "\"Diversos itens, como os vermes de limos, são usadas";
+    mes "na criação de outros itens, ou apenas para trocar e vender.\"";
     next;
     goto L_Menu_A;
 
 L_Monster:
     mes "[Ian the Guide]";
-    mes "\"In every world, there are beasts. Monsters can be found almost anywhere!~";
-    mes "To fight them, please read [Fighting] if you do not know how.\"";
+    mes "\"Em todo mundo, existem animais, Monstros, etc... eles podem ser encontrados em praticamente todos os lugares!~";
+    mes "Para combatê-los, por favor leia [Combates] se você não sabe como.\"";
     next;
-    mes "\"There a several types of monsters, Aggressive, Neutral, and Assistants.\"";
-    next;
-    mes "[Ian the Guide]";
-    mes "\"Aggressive monsters know that they are always in danger";
-    mes "so therefore they always keep their guard up,";
-    mes "making them attack anybody in sight.\"";
+    mes "\"Existe vários tipos de monstros, agressivo, neutro e Assistentes.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Neutral monsters tend to just lounge around until attacked.";
-    mes "They will leave everything alone unless they are threatened.\"";
+    mes "\"Monstros agressivos sabem, que eles estão sempre em perigo";
+    mes "assim, portanto, eles sempre mantem a sua protecção,";
+    mes "tornando atacar quem quer que seja à vista.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Assistants are monsters who help each other.";
-    mes "You should always check how many are around you before attacking a single one!\"";
+    mes "\"Monstros neutros tendem em apenas atacar só quando for atacado.";
+    mes "Eles vão deixar tudo em paz a menos que eles esteja ameaçados.\"";
+    next;
+    mes "[Ian the Guide]";
+    mes "\"Assistentes são monstros que se ajudam mutuamente.";
+    mes "Você deve sempre verificar quantos estão ao seu redor antes de atacar um único!\"";
     next;
     goto L_Menu_A;
 
 L_Style:
     mes "[Ian the Guide]";
-    mes "\"The stylist NPCs will cut and perm your hair!";
-    mes "They are known for their hair growth formula\"";
+    mes "\"Os NPCs estilista vai cortar e cachear seu cabelo!";
+    mes "Eles são conhecidos pela sua fórmula de crescimento do cabelo\"";
     next;
     goto L_Menu_A;
 
 L_Quests:
     mes "[Ian the Guide]";
-    mes "\"There are people in the world in need of help!";
-    mes "Most of these people aren't afraid to give rewards to those who help them.";
-    mes "So be nice and help people along the way!\"";
+    mes "\"Existem pessoas no mundo que precisam de ajuda!";
+    mes "A maioria dessas pessoas não têm medo de dar recompensas a quem os ajudar.";
+    mes "Então seja bom e ajude as pessoas ao longo do caminho!\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"If you are looking for a place to get started, I heard that the guard captain just outside the gates is looking for help.\"";
+    mes "\"Se você está procurando um lugar para começar, Ouvi dizer que o capitão da guarda do lado de fora dos portões está à procura de ajuda.\"";
     next;
     goto L_Menu_A;
 
 L_NPC:
     mes "[Ian the Guide]";
-    mes "\"NPCs [Non Playable Characters] are people who are always in the game,";
-    mes "tending to many varieties of services from just chatting to helping others.\"";
+    mes "\"NPCs são pessoas que estão sempre no jogo,";
+    mes "tendendo a muitas variedades de serviços a partir de apenas conversando a ajudar os outros.\"";
     next;
     goto L_Menu_A;
 
 L_Comm:
     mes "[Ian the Guide]";
-    mes "\"/clear clears the text box.\"";
-    mes "\"/help displays the client commands (ones starting with a /) in the chat box.\"";
-    mes "\"/whisper [name] allows you to message someone privately.\"";
-    mes "\"/who displays the current number of online users.\"";
-    mes "\"/where displays the current map's name.\"";
+    mes "\"/clear limpa a caixa de texto.\"";
+    mes "\"/help exibe os comandos do cliente (aqueles começando com a /) na caixa de bate-papo.\"";
+    mes "\"/whisper [nome] permite mensagem de alguém em particular.\"";
+    mes "\"/who exibe o número atual de usuários on-line.\"";
+    mes "\"/where exibe o nome do mapa atual.\"";
     next;
     goto L_Menu_A;
 
 L_Stats:
     mes "[Ian the Guide]";
-    mes "\"People vary greatly by how much strength, agility, dexterity, intelligence, vitality, and luck they have.\"";
+    mes "\"As pessoas variam muito pela quantidade de força, agilidade, destreza, inteligência, vitalidade e sorte que eles têm.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Strength helps you carry items, and it also allows you to hit harder – but it is not too helpful if you focus on missile weapons.";
-    mes "More agility allows you to attack faster, and to dodge attacks more easily.";
-    mes "Your dexterity determines how likely you are to hit a monster, and how effective you are with missile weapons.\"";
+    mes "\"Força ajuda a transportar itens, e também permite que você bater mais forte - mas não é muito útil se você se concentrar em armas de arremesso.";
+    mes "Mais agilidade permite que você ataque mais rápido, e para evitar ataques com mais facilidade.";
+    mes "Sua destreza determina como a probabilidade de você acertar um monstro, e quão eficaz está com armas de arremesso.\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"Vitality determines how resistant to injuries you are, and how much damage you can take before you die.";
-    mes "Intelligence is useful for alchemy and magic, but there are few opportunities for either at the moment.";
-    mes "Luck determines many small things, including the likelihood of both recieving and dealing critical hits\"";
+    mes "\"Vitalidade determina quão resistente a lesões que você é, e quanto dano você pode tomar antes de morrer.";
+    mes "Inteligência é útil para a alquimia e magia, mas há poucas oportunidades para ambos no momento.";
+    mes "Sorte determina muitas coisas pequenas, incluindo a probabilidade de ambos adquirir e levar ataques críticos\"";
     next;
     mes "[Ian the Guide]";
-    mes "\"I recommend that you practice your dexterity, since some of the more dangerous monsters are very hard to hit otherwise.";
-    mes "Don't bother trying to work on your luck, and your intelligence is probably not something anyone cares about either.\"";
+    mes "\"Eu recomendo que você pratique a sua destreza, já que alguns dos monstros mais perigosos são muito difíceis de bater de outra forma.";
+    mes "Não se preocupe em tentar trabalhar em sua sorte e sua inteligência provavelmente não é algo que qualquer um se preocupa tanto.\"";
     next;
     goto L_Menu_A;
 
 L_Magic:
     mes "[Ian the Guide]";
-    mes "\"In decades past, there was a Mana Seed south of Tulimshar, from which people could draw magical energies. Unfortunately, the seed is gone.";
-    mes "However, I've overheard the bard mentioning something about this recently... if you are interested in magic, try talking to him!\"";
+    mes "\"Em décadas passadas, houve uma semente de Mana sul de Tulimshar, a partir do qual as pessoas podem tirar energias mágicas. Infelizmente, a semente está desaparecido.";
+    mes "No entanto, tenho ouvido o bard mencionando algo sobre isso recentemente ... se você estiver interessado em magia, tente falar com ele!\"";
     next;
     goto L_Menu_A;
 
 L_Key:
     mes "[Ian the Guide]";
-    mes "\"There are many key combinations, press F1 for a short list of them!\"";
+    mes "\"Há muitas combinações de teclas, pressione F1 para uma pequena lista deles!\"";
     next;
     goto L_Menu_A;
 
 L_Laws:
     mes "[Ian the Guide]";
-    mes "\"The constable can help you with them.\"";
+    mes "\"To guarda pode ajudá-lo com eles.\"";
     next;
     goto L_Menu_A;
 
 L_Know:
     mes "[Ian the Guide]";
-    mes "\"Lost? Confused? Want to know why you can't get past a quest, overcome an NPC or find an item?  Check http://wiki.themanaworld.org for player hints, walkthroughs, item lists and more!\"";
+    mes "\"Perdeu? Confuso? Quer saber por que você não pode passar por uma quest, superar um NPC ou encontrar um item?  Verifique http://wiki.themanaworld.org para jogadores dicas, orientações, listas de itens e muito mais!\"";
     next;
-    mes "\"But remember, the game isn't fun when you already know what to do. Use it well or you will lose interest in playing The Mana World! Please help by reporting anything that is unclear, outdated or that needs to be seen on our forums at http://forums.themanaworld.org.\"";
+    mes "\"Mas lembre-se, o jogo não é divertido quando você já sabe o que fazer. Use-o bem ou você vai perder o interesse em jogar The Mana World! Por favor, ajude relatando qualquer coisa que não está clara, desatualizadas ou que precisa ser visto em nossos fóruns em http://forums.themanaworld.org.\"";
     close;
 
 L_Grad:
     getinventorylist;
     if (@inventorylist_count == 100) goto L_TooMany;
     mes "[Ian the Guide]";
-    mes "\"Hey, you've been doing good, let me give you this.\"";
+    mes "\"Ei, você foi fazer o bem, deixe-me dar-lhe isso.\"";
     getitem "GraduationCap", 1;
     set FLAGS, FLAGS | FLAG_GOT_GRADUATIONCAP;
     next;
@@ -178,7 +178,7 @@ L_Grad:
 
 L_TooMany:
     mes "[Ian the Guide]";
-    mes "\"I wanted to give you something, but you don't have room for it.\"";
+    mes "\"Eu queria dar-lhe alguma coisa, mas você não tem espaço para isso.\"";
     next;
     goto L_DoneGrad;
 }
