@@ -1,4 +1,6 @@
 //
+// traduzido por Italo Luna
+
 
 001-2.gat,132,25,0|script|Phaet|125,0,0,
 {

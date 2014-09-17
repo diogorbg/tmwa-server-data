@@ -1,4 +1,6 @@
 // NPC to provide hints on progression of linear quest chain in Tulimshar
+// traduzido por Ernando Quirino
+
 
 001-1.gat,49,31,0|script|Gladys|154,
 {

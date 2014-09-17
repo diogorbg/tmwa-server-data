@@ -2,6 +2,8 @@
 // Offers item conversion for non-magic users
 // Updated by: TheKandiman
 // Reviewed by: Wombat
+// traduzido por Ernando Quirino
+
 
 001-1.gat,57,31,0|script|Negociante|115,
 {

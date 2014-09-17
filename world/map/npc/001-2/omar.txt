@@ -1,4 +1,6 @@
 //
+// traduzido por Italo Luna e Ernando Quirino
+
 function|script|KadiyaSubquestConsts|,
 {
     set @Q_kadiya_status, (QUEST_MAGIC2 & NIBBLE_3_MASK) >> NIBBLE_3_SHIFT;

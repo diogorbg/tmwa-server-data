@@ -1,4 +1,6 @@
 // Dedication to Irene Christina
+// traduzido por Italo Luna
+
 
 001-2.gat,76,68,0|script|#IreneDedication|400,
 {

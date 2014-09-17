@@ -1,4 +1,6 @@
 //
+// traduzido por Ernando Quirino
+
 
 001-1.gat,29,50,0|script|Candide|156,
 {

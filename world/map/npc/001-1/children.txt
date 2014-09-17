@@ -1,4 +1,6 @@
 // Aisha
+// traduzido por Ernando Quirino
+
 
 001-1.gat,95,29,0|script|Aisha|108,
 {

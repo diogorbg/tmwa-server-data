@@ -1,4 +1,6 @@
 // Casino
+// traduzido por Italo Luna
+
 
 // takes part in quest given by 021-2/kylian.txt
 001-2.gat,32,72,0|script|#CasinoEntrance|32767,1,1,

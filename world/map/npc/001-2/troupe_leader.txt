@@ -1,4 +1,6 @@
 //
+// traduzido por Italo Luna
+
 
 001-2.gat,34,23,0|script|Lider da Trupe|165,
 {

@@ -1,3 +1,5 @@
+// traduzido por Ernando Quirino
+
 001-1.gat,52,36,0|script|Nicolas|100,
 {
     mes "[Nicolas o barbeiro]";

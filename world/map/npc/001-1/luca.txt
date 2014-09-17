@@ -1,4 +1,6 @@
 //
+// traduzido por Italo Luna
+
 
 001-1.gat,108,55,0|script|Luca|102,
 {

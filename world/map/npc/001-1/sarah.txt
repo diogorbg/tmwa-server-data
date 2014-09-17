@@ -1,4 +1,6 @@
 // Variables used: nibble 1 of QUEST_SouthTulimshar
+// traduzido por Ernando Quirino
+
 
 001-1.gat,137,78,0|script|Sarah|106,
 {
