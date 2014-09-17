@@ -1,17 +1,16 @@
 //
-// traduzido por Diogo_RBG
 
 002-1.gat,92,100,0|script|Samuel|132,
 {
-    mes "[Samuel o Nômade]";
-    mes "\"Este é realmente um ótimo lugar.\"";
-    mes "Você não acha?\"";
+    mes "[Samuel the Nomad]";
+    mes "\"This is really a nice place.\"";
+    mes "Don't you think so?\"";
     close;
 }
 
 002-1.gat,102,100,0|script|Elijah|128,
 {
-    mes "[Elijah o Nômade]";
-    mes "\"É legal encontrar um refúgio como este...\"";
+    mes "[Elijah the Nomad]";
+    mes "\"It's nice to find a respite like this...\"";
     close;
 }
